@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "features": "Imkoniyatlar",
+    "forEveryone": "Hammaga",
+    "download": "Tez kunda"
+  },
+  "hero": {
+    "title": "FitMe — FITNESS DUNYOSIDA KEYINGI QADAM",
+    "subtitle": "Orzu qilgan tanangizga erishish uchun eng yaxshi mobil vosita",
+    "comingSoon": "Tez kunda",
+    "betaMessage": "Ilova hozirda beta-test bosqichida"
+  },
+  "features": {
+    "title": "Fitness sayohatingiz uchun kuchli funksiyalar",
+    "trainers": {
+      "title": "Sertifikatlangan shaxsiy murabbiylar",
+      "description": "Fitness yo'lingizni yo'naltiruvchi ekspert murabbiylar bilan bog'laning"
+    },
+    "tracking": {
+      "title": "Taraqqiyotni kuzatish",
+      "description": "Batafsil tahlillar va ma'lumotlar bilan yaxshilanishlarni kuzating"
+    },
+    "measurements": {
+      "title": "Tana o'lchovlari",
+      "description": "Tana tarkibidagi o'zgarishlarni vaqt o'tishi bilan kuzating"
+    },
+    "library": {
+      "title": "Mashqlar kutubxonasi",
+      "description": "Mukammal shakl uchun video qo'llanmalarga kirish"
+    },
+    "nutrition": {
+      "title": "Ovqatlanish rejasi",
+      "description": "Fitness maqsadlaringizga moslashtirilgan ovqatlanish rejalari"
+    },
+    "workouts": {
+      "title": "Mashq dasturlari",
+      "description": "Maqsadlaringizga moslashtirilgan mashq rejalari"
+    }
+  },
+  "roles": {
+    "title": "Fitnesdagi har bir kishi uchun",
+    "beginners": {
+      "title": "Boshlang'ichlar",
+      "description": "Yo'naltirilgan mashqlar va ekspert yordami bilan fitness sayohatingizni boshlang"
+    },
+    "advanced": {
+      "title": "Ilg'or sportchilar",
+      "description": "Mashg'ulotlaringizni yangi darajaga ko'taring"
+    },
+    "trainers": {
+      "title": "Shaxsiy murabbiylar",
+      "description": "Biznesingizni rivojlantiring va mijozlarni samarali boshqaring"
+    }
+  },
+  "cta": {
+    "title": "Fitness sayohatingizni bugun boshlang",
+    "subtitle": "FitMe bilan hayotini o'zgartirgan minglab foydalanuvchilarga qo'shiling",
+    "comingSoon": "Tez kunda",
+    "becomeTrainer": "Murabbiy bo'ling"
+  },
+  "footer": {
+    "rights": "© 2025 FitMe. Barcha huquqlar himoyalangan."
+  }
+}

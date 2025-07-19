@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "features": "Features",
+    "forEveryone": "For Everyone",
+    "download": "Coming Soon"
+  },
+  "hero": {
+    "title": "FitMe — THE NEXT STEP IN THE WORLD OF FITNESS",
+    "subtitle": "The ultimate mobile tool to achieve your dream body",
+    "comingSoon": "Coming Soon",
+    "betaMessage": "The app is currently in beta testing"
+  },
+  "features": {
+    "title": "Powerful Features for Your Fitness Journey",
+    "trainers": {
+      "title": "Certified Personal Trainers",
+      "description": "Connect with expert trainers who guide your fitness journey"
+    },
+    "tracking": {
+      "title": "Progress Tracking",
+      "description": "Monitor your improvements with detailed analytics and insights"
+    },
+    "measurements": {
+      "title": "Body Measurements",
+      "description": "Track your body composition changes over time"
+    },
+    "library": {
+      "title": "Exercise Library",
+      "description": "Access comprehensive video guides for perfect form"
+    },
+    "nutrition": {
+      "title": "Nutrition Plans",
+      "description": "Customized meal plans to support your fitness goals"
+    },
+    "workouts": {
+      "title": "Workout Programs",
+      "description": "Tailored workout routines for your specific goals"
+    }
+  },
+  "roles": {
+    "title": "For Everyone in Fitness",
+    "beginners": {
+      "title": "Beginners",
+      "description": "Start your fitness journey with guided workouts and expert support"
+    },
+    "advanced": {
+      "title": "Advanced Athletes",
+      "description": "Take your training to the next level with advanced tracking and programs"
+    },
+    "trainers": {
+      "title": "Personal Trainers",
+      "description": "Grow your business and manage clients efficiently"
+    }
+  },
+  "cta": {
+    "title": "Start Your Fitness Journey Today",
+    "subtitle": "Join thousands of users who have transformed their lives with FitMe",
+    "comingSoon": "Coming Soon",
+    "becomeTrainer": "Become a Trainer"
+  },
+  "footer": {
+    "rights": "© 2025 FitMe. All rights reserved."
+  }
+}
