@@ -10,9 +10,6 @@ import {
   Brain,
   ChevronDown,
   Mail,
-  Instagram,
-  Facebook,
-  Twitter,
   Menu,
   X,
 } from "lucide-react";
