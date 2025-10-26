@@ -21,6 +21,8 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",
+    "@gravity-ui/chartkit": "^7.18.0",
+    "@gravity-ui/uikit": "^7.24.0",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
