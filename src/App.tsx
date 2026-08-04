@@ -3,7 +3,6 @@ import {
 	ChevronDown,
 	Dumbbell,
 	LineChart,
-	Mail,
 	PersonStanding,
 	Users,
 	Utensils,
