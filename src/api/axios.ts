@@ -6,7 +6,7 @@ import { authService } from '../service/auth/auth.service'
 import { errorCatch } from './api.helper'
 
 const axiosOptions: CreateAxiosDefaults = {
-	baseURL: import.meta.env.VITE_SOCKET_URL,
+	baseURL: import.meta.env.VITE_PUBLIC_API_URL,
 	headers: {
 		'Content-Type': 'application/json'
 	},

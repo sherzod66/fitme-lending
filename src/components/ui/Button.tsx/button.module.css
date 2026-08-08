@@ -1,0 +1,82 @@
+.button {
+	cursor: pointer;
+	border-radius: 12px;
+	display: block;
+	text-align: center;
+	position: relative;
+	padding: 8px 15px;
+	overflow: hidden;
+	transition: transform 0.2s;
+	font-weight: 500;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.button.primary {
+	background: #d70c0c;
+	color: #ffffff;
+}
+
+.button.danger {
+	background: #dc2626;
+	color: #ffffff;
+}
+
+.button.run::after {
+	content: '';
+	position: absolute;
+	left: -100%;
+	bottom: -50%;
+	width: 120px;
+	height: 200%;
+	background: linear-gradient(270deg, transparent, #ffffff48, transparent);
+	transform: rotate(15deg);
+	animation: slide-glow 2s ease-in-out infinite;
+	z-index: 0;
+}
+
+.button:disabled {
+	filter: brightness(0.6);
+}
+
+.button:active {
+	animation: gradient-shift 0.5s ease-in-out infinite;
+	transform: scale(0.93);
+}
+
+.button.secondary {
+	background: transparent;
+	border: 1px solid #d70c0c;
+	color: #ffffff;
+	transition: all 0.2s ease-in-out;
+}
+
+.button.secondary:hover {
+	background: #d70c0c;
+}
+
+.button.big {
+	font-size: 18px;
+	padding: 10px 30px;
+	line-height: 1.5rem;
+}
+
+@keyframes gradient-shift {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes slide-glow {
+	0% {
+		left: -100%;
+	}
+	100% {
+		left: 100%;
+	}
+}

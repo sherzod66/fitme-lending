@@ -5,15 +5,22 @@ import { IUser } from '../../types/user.types'
 import { removeFromStorage, saveTokenStorage } from './auth.helper'
 
 export const authService = {
-	async requestAdmin(userId: string) {
+	async login(email: string) {
 		return await axiosClassic.post<{
 			status: boolean
 			message: string
-			userId: string
-		}>('/auth/login', { userId })
+			email: string
+		}>('/auth/login', { email })
 	},
-	async adminActivationKey(data: { userId: string; activate_key: string }) {
-		const response = await axiosClassic.post<IUser>('/auth/examination-key', data)
+	async register(body: { email: string; name: string }) {
+		return await axiosClassic.post<{
+			status: boolean
+			message: string
+			email: string
+		}>('/auth/login', body)
+	},
+	async verifyCode(body: { email: string; code: string }) {
+		const response = await axiosClassic.post<IUser>('/auth/verify-email-web', body)
 		if (response.data.accessToken) saveTokenStorage(response.data.accessToken)
 		return response
 	},
@@ -39,7 +46,7 @@ export const authService = {
 	},
 
 	async logout() {
-		const response = await axiosClassic.post<boolean>('/auth/logout')
+		const response = await axiosClassic.post<boolean>('/auth/logout-web')
 		if (response) {
 			removeFromStorage()
 			setUser(null)

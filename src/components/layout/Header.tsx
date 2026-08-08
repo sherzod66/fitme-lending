@@ -1,6 +1,7 @@
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 
 import { LanguageSwitcher } from '../LanguageSwitcher'
 
@@ -18,8 +19,8 @@ export default function Header() {
 		<header className='fixed w-full z-50 bg-black/95 border-b border-red-800'>
 			<nav className='max-w-7xl mx-auto px-4 lg:px-8'>
 				<div className='flex justify-between items-center h-16'>
-					<a
-						href='#'
+					<Link
+						to='/'
 						className='block w-36 h-14 p-2'
 					>
 						<img
@@ -27,7 +28,7 @@ export default function Header() {
 							src='/FitMe.png'
 							alt=''
 						/>
-					</a>
+					</Link>
 
 					{/* Desktop Navigation */}
 					<div className='hidden md:flex items-center gap-8'>
@@ -44,12 +45,12 @@ export default function Header() {
 							{t('nav.forEveryone')}
 						</button>
 						<LanguageSwitcher />
-						<button
+						<Link
+							to='/auth'
 							className='bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-3xl transition'
-							type='button'
 						>
 							Авторизация
-						</button>
+						</Link>
 					</div>
 
 					{/* Mobile Menu Button */}
@@ -78,12 +79,12 @@ export default function Header() {
 								{t('nav.forEveryone')}
 							</button>
 							<LanguageSwitcher />
-							<button
+							<Link
 								className='bg-red-600 hover:bg-red-700 text-white p-2 rounded transition'
-								type='button'
+								to='/auth'
 							>
 								Авторизация
-							</button>
+							</Link>
 						</div>
 					</div>
 				)}

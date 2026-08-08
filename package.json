@@ -12,6 +12,7 @@
   "dependencies": {
     "@tanstack/react-query": "^5.101.4",
     "axios": "^1.19.0",
+    "clsx": "^2.1.1",
     "i18next": "^23.10.1",
     "i18next-browser-languagedetector": "^7.2.0",
     "i18next-http-backend": "^2.5.0",
@@ -19,6 +20,8 @@
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-hook-form": "^7.85.0",
+    "react-hot-toast": "^2.6.0",
     "react-i18next": "^14.1.0",
     "react-router-dom": "^7.8.2",
     "zustand": "^5.0.14"
