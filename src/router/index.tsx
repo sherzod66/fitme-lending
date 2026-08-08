@@ -1,11 +1,15 @@
 import { createBrowserRouter } from 'react-router-dom'
 
 import WrappedApp from '../App'
+import ProtectedRoute from '../components/auth/ProtectedRoute'
 import FeedbackForm from '../screens/DeleteAccount'
 import PrivacyPolicy from '../screens/Policy'
 import SubscriptionTerms from '../screens/SubscriptionTerms'
 import Auth from '../screens/auth/Auth'
 import Profile from '../screens/profile/Profile'
+import PaymentMethods from '../screens/profile/payment-methods/PaymentMethods'
+import Payments from '../screens/profile/payments/Payments'
+import Subscribe from '../screens/profile/subscribe/Subscribe'
 import Stats from '../screens/stats/Stats'
 
 export const router = createBrowserRouter([
@@ -34,7 +38,24 @@ export const router = createBrowserRouter([
 		element: <Stats />
 	},
 	{
-		path: '/profile',
-		element: <Profile />
+		element: <ProtectedRoute />,
+		children: [
+			{
+				path: '/profile',
+				element: <Profile />
+			},
+			{
+				path: '/profile/payment-methods',
+				element: <PaymentMethods />
+			},
+			{
+				path: '/profile/payments',
+				element: <Payments />
+			},
+			{
+				path: '/profile/subscribe',
+				element: <Subscribe />
+			}
+		]
 	}
 ])

@@ -3,11 +3,19 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
+import { getAccessToken } from '../../service/auth/auth.helper'
 import { LanguageSwitcher } from '../LanguageSwitcher'
 
-export default function Header() {
+type Props = {
+	accountMode?: boolean
+}
+
+export default function Header({ accountMode }: Props) {
 	const { t } = useTranslation()
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
+	const isAuthed = !!getAccessToken()
+	const accountTo = isAuthed || accountMode ? '/profile' : '/auth'
+	const accountLabel = isAuthed || accountMode ? 'Аккаунт' : 'Авторизация'
 
 	const scrollToSection = (id: string) => {
 		const element = document.getElementById(id)
@@ -30,7 +38,6 @@ export default function Header() {
 						/>
 					</Link>
 
-					{/* Desktop Navigation */}
 					<div className='hidden md:flex items-center gap-8'>
 						<button
 							onClick={() => scrollToSection('features')}
@@ -46,14 +53,13 @@ export default function Header() {
 						</button>
 						<LanguageSwitcher />
 						<Link
-							to='/auth'
+							to={accountTo}
 							className='bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-3xl transition'
 						>
-							Авторизация
+							{accountLabel}
 						</Link>
 					</div>
 
-					{/* Mobile Menu Button */}
 					<button
 						className='md:hidden text-gray-300 hover:text-white'
 						onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -62,7 +68,6 @@ export default function Header() {
 					</button>
 				</div>
 
-				{/* Mobile Navigation */}
 				{isMenuOpen && (
 					<div className='md:hidden py-4 border-t border-red-800'>
 						<div className='flex flex-col gap-4'>
@@ -80,10 +85,10 @@ export default function Header() {
 							</button>
 							<LanguageSwitcher />
 							<Link
-								className='bg-red-600 hover:bg-red-700 text-white p-2 rounded transition'
-								to='/auth'
+								className='bg-red-600 hover:bg-red-700 text-white p-2 rounded transition text-center'
+								to={accountTo}
 							>
-								Авторизация
+								{accountLabel}
 							</Link>
 						</div>
 					</div>

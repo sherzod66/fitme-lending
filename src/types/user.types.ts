@@ -3,9 +3,12 @@ export interface IUser {
 	createdAt: Date
 	updatedAt: Date
 	name: string
-	phoneNumber: string
+	phoneNumber?: string
 	email: string
 	role: string
-	gender: string
-	accessToken: string
+	gender?: string
+	avatar?: string
+	hasActiveSubscription: boolean
+	paymentFailedAttempts?: number
+	accessToken?: string
 }

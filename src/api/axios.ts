@@ -1,5 +1,6 @@
 import axios, { type CreateAxiosDefaults } from 'axios'
 
+import { PAYME_API_URL, PAYME_CASHBOX_ID } from '../constants/constants'
 import { getAccessToken, removeFromStorage } from '../service/auth/auth.helper'
 import { authService } from '../service/auth/auth.service'
 
@@ -49,3 +50,11 @@ instance.interceptors.response.use(
 		throw error
 	}
 )
+
+export const paymeInstance = axios.create({
+	baseURL: PAYME_API_URL,
+	headers: {
+		'Content-Type': 'application/json',
+		'X-Auth': PAYME_CASHBOX_ID
+	}
+})
