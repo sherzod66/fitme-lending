@@ -12,6 +12,7 @@ import { Suspense } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import Layout from './components/layout/Layout'
+import SubscriptionSection from './components/subscription/SubscriptionSection'
 import { android_link, ios_link } from './constants/constants'
 
 function App() {
@@ -145,6 +146,8 @@ function App() {
 					</div>
 				</div>
 			</section>
+
+			<SubscriptionSection />
 
 			{/* User Roles Section */}
 			<section

@@ -1,6 +1,7 @@
 {
   "nav": {
     "features": "Features",
+    "subscription": "Subscription",
     "forEveryone": "For Everyone",
     "download": "Coming Soon"
   },
@@ -35,6 +36,28 @@
     "workouts": {
       "title": "Workout Programs",
       "description": "Tailored workout routines for your specific goals"
+    }
+  },
+  "subscription": {
+    "title": "FIT.ME Premium Subscription",
+    "subtitle": "Get access to all features and start your journey to your dream body",
+    "featuresTitle": "What's included",
+    "plansTitle": "Plans",
+    "perMonth": "per month",
+    "popular": "Popular",
+    "buyButton": "Get subscription",
+    "termsPrefix": "By subscribing, you agree to the",
+    "termsLink": "subscription payment agreement",
+    "paymeNote": "Payments are processed via Payme in UZS",
+    "noPlans": "Plans are temporarily unavailable",
+    "features": {
+      "workoutDiary": "Workout diary",
+      "workoutPrograms": "Workout programs",
+      "nutritionPlans": "Nutrition plans",
+      "foodScanner": "Food scanner",
+      "trainerInteraction": "Trainer interaction",
+      "customPrograms": "Create your own workout programs",
+      "trainingVideos": "Watch training videos"
     }
   },
   "roles": {

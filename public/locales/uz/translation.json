@@ -1,6 +1,7 @@
 {
   "nav": {
     "features": "Imkoniyatlar",
+    "subscription": "Obuna",
     "forEveryone": "Hammaga",
     "download": "Tez kunda"
   },
@@ -35,6 +36,28 @@
     "workouts": {
       "title": "Mashq dasturlari",
       "description": "Maqsadlaringizga moslashtirilgan mashq rejalari"
+    }
+  },
+  "subscription": {
+    "title": "FIT.ME premium obunasi",
+    "subtitle": "Servisning barcha funksiyalaridan foydalaning va orzu qilgan tanaga erishing",
+    "featuresTitle": "Obunaga nimalar kiradi",
+    "plansTitle": "Tariflar",
+    "perMonth": "oyiga",
+    "popular": "Mashhur",
+    "buyButton": "Obunani rasmiylashtirish",
+    "termsPrefix": "Obunani rasmiylashtirish orqali siz quyidagiga rozilik bildirasiz:",
+    "termsLink": "obunani to'lash bo'yicha foydalanuvchi kelishuvi",
+    "paymeNote": "To'lov Payme orqali so'mda (UZS) amalga oshiriladi",
+    "noPlans": "Tariflar vaqtincha mavjud emas",
+    "features": {
+      "workoutDiary": "Mashg'ulotlar kundaligi",
+      "workoutPrograms": "Mashg'ulot dasturlari",
+      "nutritionPlans": "Ovqatlanish rejalari",
+      "foodScanner": "Ovqat skaneri",
+      "trainerInteraction": "Murabbiy bilan aloqa",
+      "customPrograms": "O'z mashg'ulot dasturlarini tuzish",
+      "trainingVideos": "O'quv videolarini ko'rish"
     }
   },
   "roles": {

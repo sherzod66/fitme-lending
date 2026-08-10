@@ -46,6 +46,12 @@ export default function Header({ accountMode }: Props) {
 							{t('nav.features')}
 						</button>
 						<button
+							onClick={() => scrollToSection('subscription')}
+							className='text-gray-300 hover:text-red-500 transition'
+						>
+							{t('nav.subscription')}
+						</button>
+						<button
 							onClick={() => scrollToSection('roles')}
 							className='text-gray-300 hover:text-red-500 transition'
 						>
@@ -76,6 +82,12 @@ export default function Header({ accountMode }: Props) {
 								className='text-gray-300 hover:text-red-500 transition'
 							>
 								{t('nav.features')}
+							</button>
+							<button
+								onClick={() => scrollToSection('subscription')}
+								className='text-gray-300 hover:text-red-500 transition'
+							>
+								{t('nav.subscription')}
 							</button>
 							<button
 								onClick={() => scrollToSection('roles')}
