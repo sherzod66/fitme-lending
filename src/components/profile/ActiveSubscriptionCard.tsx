@@ -1,4 +1,4 @@
-import { CalendarDays, Check, CreditCard, Crown } from 'lucide-react'
+import { CalendarCheck, CalendarDays, CalendarSync, Check, CreditCard, Crown } from 'lucide-react'
 
 import { PREMIUM_FEATURES } from '../../constants/constants'
 import { ISubscription } from '../../types/subscription.types'
@@ -47,7 +47,7 @@ export default function ActiveSubscriptionCard({ subscription, onManage }: Props
 			))}
 
 			<div className='flex items-center gap-2.5 py-2.5'>
-				<CalendarDays
+				<CalendarSync
 					className='size-[18px] text-white shrink-0'
 					strokeWidth={1.75}
 				/>
@@ -56,17 +56,28 @@ export default function ActiveSubscriptionCard({ subscription, onManage }: Props
 					{subscription.autoRenew ? 'Активно' : 'Отключено'}
 				</span>
 			</div>
-
 			<div className='flex items-center gap-2.5 py-2.5'>
-				<CreditCard
+				<CalendarDays
 					className='size-[18px] text-white shrink-0'
 					strokeWidth={1.75}
 				/>
-				<span className='flex-1 text-white text-sm'>Следующее списание:</span>
+				<span className='flex-1 text-white text-sm'>Действует до:</span>
 				<span className='text-[#ff383c] text-sm font-semibold'>
-					{formatDateTime(subscription.nextBillingAt)}
+					{formatDateTime(subscription.expiresAt)}
 				</span>
 			</div>
+			{subscription.autoRenew && (
+				<div className='flex items-center gap-2.5 py-2.5'>
+					<CreditCard
+						className='size-[18px] text-white shrink-0'
+						strokeWidth={1.75}
+					/>
+					<span className='flex-1 text-white text-sm'>Следующее списание:</span>
+					<span className='text-[#ff383c] text-sm font-semibold'>
+						{formatDateTime(subscription.nextBillingAt)}
+					</span>
+				</div>
+			)}
 
 			<button
 				type='button'
