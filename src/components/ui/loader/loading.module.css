@@ -19,8 +19,8 @@
 .loading .loader {
 	width: 48px;
 	height: 48px;
-	border: 5px solid #f7c798;
-	border-bottom-color: #f57c00;
+	border: 5px solid #ffffff;
+	border-bottom-color: #dd2726;
 	border-radius: 50%;
 	display: inline-block;
 	box-sizing: border-box;

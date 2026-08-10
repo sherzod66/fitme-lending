@@ -3,6 +3,7 @@ import { CalendarDays, Check, CreditCard, Crown } from 'lucide-react'
 import { PREMIUM_FEATURES } from '../../constants/constants'
 import { ISubscription } from '../../types/subscription.types'
 import { formatDateTime } from '../../utils/formatDate'
+import { formatSum } from '../../utils/formatPrice'
 
 type Props = {
 	subscription: ISubscription
@@ -18,6 +19,9 @@ export default function ActiveSubscriptionCard({ subscription, onManage }: Props
 				<div className='flex-1 flex flex-col gap-[5px] min-w-0'>
 					<p className='text-[#505050] text-base'>Текущий тариф</p>
 					<p className='text-[#ff383c] text-lg font-bold break-words'>{planName}</p>
+					<p className='text-[#ff383c] text-lg font-bold break-words'>
+						{formatSum(subscription.plan?.price || 0)}
+					</p>
 				</div>
 				<div className='bg-[#321115] rounded-full size-[50px] flex items-center justify-center shrink-0'>
 					<Crown
