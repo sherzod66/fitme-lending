@@ -3,13 +3,52 @@
     "features": "Features",
     "subscription": "Subscription",
     "forEveryone": "For Everyone",
-    "download": "Coming Soon"
+    "download": "Coming Soon",
+    "training": "Training",
+    "progress": "Progress",
+    "nutrition": "Nutrition",
+    "diary": "Diary",
+    "downloadApp": "Download the app",
+    "menu": "Menu",
+    "close": "Close",
+    "account": "Account",
+    "login": "Sign in"
   },
   "hero": {
-    "title": "FitMe — THE NEXT STEP IN THE WORLD OF FITNESS",
-    "subtitle": "The ultimate mobile tool to achieve your dream body",
-    "comingSoon": "Coming Soon",
-    "betaMessage": "The app is currently in beta testing"
+    "line1": "Your body.",
+    "line2": "Your plan.",
+    "line3": "Your",
+    "line3Accent": "progress.",
+    "lead": "Everything you need for training, progress and healthy habits — in a single app.",
+    "cta": "Download FitMe",
+    "stores": "App Store · Google Play",
+    "cards": {
+      "workouts": { "value": "12", "label": "workouts" },
+      "strength": { "value": "+18%", "label": "strength" },
+      "consistency": { "value": "86%", "label": "consistency" }
+    }
+  },
+  "training": {
+    "headline": "Training",
+    "statement": "Train by a ready-made plan or build your own."
+  },
+  "progress": {
+    "headline": "See yourself change.",
+    "statement": "Every workout adds up — and you see the result in numbers.",
+    "stats": {
+      "workouts": "workouts",
+      "strength": "strength",
+      "consistency": "consistency"
+    },
+    "panel": {
+      "exercise": "Bench press",
+      "range": "6 months",
+      "month": "March",
+      "weight": "weight",
+      "chest": "chest",
+      "waist": "waist",
+      "streak": "12 day streak"
+    }
   },
   "features": {
     "title": "Powerful Features for Your Fitness Journey",

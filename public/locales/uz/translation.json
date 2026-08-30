@@ -3,13 +3,52 @@
     "features": "Imkoniyatlar",
     "subscription": "Obuna",
     "forEveryone": "Hammaga",
-    "download": "Tez kunda"
+    "download": "Tez kunda",
+    "training": "Mashg'ulotlar",
+    "progress": "Natijalar",
+    "nutrition": "Ovqatlanish",
+    "diary": "Kundalik",
+    "downloadApp": "Ilovani yuklab olish",
+    "menu": "Menyu",
+    "close": "Yopish",
+    "account": "Akkaunt",
+    "login": "Kirish"
   },
   "hero": {
-    "title": "FitMe — FITNESS DUNYOSIDA KEYINGI QADAM",
-    "subtitle": "Orzu qilgan tanangizga erishish uchun eng yaxshi mobil vosita",
-    "comingSoon": "Tez kunda",
-    "betaMessage": "Ilova hozirda beta-test bosqichida"
+    "line1": "Tanang.",
+    "line2": "Rejang.",
+    "line3": "",
+    "line3Accent": "Natijang.",
+    "lead": "Mashg'ulot, natija va sog'lom odatlar uchun kerakli hamma narsa — bitta ilovada.",
+    "cta": "FitMe'ni yuklab olish",
+    "stores": "App Store · Google Play",
+    "cards": {
+      "workouts": { "value": "12", "label": "mashg'ulot" },
+      "strength": { "value": "+18%", "label": "kuch" },
+      "consistency": { "value": "86%", "label": "barqarorlik" }
+    }
+  },
+  "training": {
+    "headline": "Mashg'ulotlar",
+    "statement": "Tayyor reja bo'yicha mashq qil yoki o'zingniki yarat."
+  },
+  "progress": {
+    "headline": "O'zgarishingizni ko'ring.",
+    "statement": "Har bir mashg'ulot natijaga qo'shiladi — va siz uni raqamlarda ko'rasiz.",
+    "stats": {
+      "workouts": "mashg'ulot",
+      "strength": "kuch",
+      "consistency": "barqarorlik"
+    },
+    "panel": {
+      "exercise": "Yotib ko'tarish",
+      "range": "6 oy",
+      "month": "Mart",
+      "weight": "vazn",
+      "chest": "ko'krak",
+      "waist": "bel",
+      "streak": "12 kun ketma-ket"
+    }
   },
   "features": {
     "title": "Fitness sayohatingiz uchun kuchli funksiyalar",

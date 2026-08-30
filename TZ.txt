@@ -1,0 +1,235 @@
+You are a senior product designer and senior frontend engineer.
+
+We are building the official landing page for **FIT.ME**, a premium fitness mobile application.
+
+The primary goal of this website is NOT to explain every feature.
+
+The primary goal is:
+
+**Make the visitor want to download the FitMe app.**
+
+The website should feel like a premium consumer product, not a generic SaaS landing page.
+
+Think about the visual quality and product storytelling of:
+
+* Apple
+* Nike
+* Whoop
+* Linear
+* high-end modern mobile applications
+
+But do NOT copy any of them directly.
+
+Create an original visual identity for FIT.ME.
+
+---
+
+## TECH STACK
+
+Use:
+
+* TypeScript
+* React
+* Tailwind CSS
+* Framer Motion for animations
+* Lucide icons where icons are needed
+
+Write clean, production-ready code.
+
+Components must be reusable.
+
+Avoid unnecessary dependencies.
+
+---
+
+# FITME VISUAL IDENTITY
+
+The entire website must follow a strict visual system.
+
+### Colors
+
+Background:
+
+#050505
+
+Primary text:
+
+#FFFFFF
+
+Secondary text:
+
+#A1A1A1
+
+Cards:
+
+#111111
+
+Subtle borders:
+
+#222222
+
+Primary accent:
+
+#D70C0C
+
+The ONLY accent color is red.
+
+Never introduce:
+
+* blue
+* purple
+* orange
+* cyan
+* colorful gradients
+
+The website should visually revolve around:
+
+**BLACK + WHITE + RED**
+
+---
+
+# DESIGN PHILOSOPHY
+
+The website should be:
+
+* cinematic
+* minimal
+* premium
+* athletic
+* confident
+* modern
+* editorial
+* highly visual
+
+Avoid:
+
+* generic SaaS layouts
+* excessive cards
+* excessive text
+* stock photography
+* cheesy gym aesthetics
+* bodybuilding clichés
+* gradients everywhere
+* excessive rounded containers
+* huge navigation menus
+* unnecessary illustrations
+
+Use large typography.
+
+Use generous whitespace.
+
+Use asymmetry.
+
+Use large visual compositions.
+
+The website should feel intentionally designed, not assembled from UI components.
+
+---
+
+# CONTENT PHILOSOPHY
+
+Use very little text.
+
+Every section should communicate one idea.
+
+The user should understand the entire product by scrolling through visual storytelling.
+
+The hierarchy should be:
+
+VISUAL → HEADLINE → SHORT DESCRIPTION → CTA
+
+Not:
+
+HEADLINE → PARAGRAPH → BULLET LIST → CARDS.
+
+---
+
+# APP MOCKUPS
+
+The website will showcase FIT.ME application screens.
+
+Important:
+
+Do NOT invent a completely different application design.
+
+All application mockups must follow the same FIT.ME design language:
+
+* black
+* dark gray
+* white
+* red
+* rounded cards
+* clean typography
+* subtle borders
+* premium spacing
+
+The mockups should look like real screenshots displayed inside premium smartphone frames. Use mock photos, I'll post screenshots myself.
+
+---
+
+# ANIMATION
+
+Use Framer Motion.
+
+Animations should be:
+
+* subtle
+* smooth
+* premium
+* slow
+
+Use:
+
+* fade in
+* translateY
+* scale
+* subtle parallax
+* staggered appearance
+
+Avoid:
+
+* bouncing
+* excessive rotations
+* aggressive animations
+* distracting effects
+
+Animations should support the storytelling rather than become the focus.
+
+---
+
+# RESPONSIVENESS
+
+Desktop must be designed intentionally.
+
+Mobile must NOT simply be a smaller desktop.
+
+Create dedicated responsive layouts.
+
+On mobile:
+
+* typography scales down intelligently
+* phones stack vertically
+* spacing is reduced
+* CTA becomes full width
+* horizontal compositions become vertical compositions
+
+---
+
+# IMPORTANT DEVELOPMENT RULE
+
+Build the landing page section by section.
+
+DO NOT create the entire website at once.
+
+We will implement one screen/section at a time.
+
+After each section:
+
+1. Check visual hierarchy.
+2. Check spacing.
+3. Check responsive behavior.
+4. Check animations.
+5. Make sure it matches the FIT.ME design system.
+6. Do not modify previous sections unless explicitly requested.
+
+Wait for my next instruction before implementing the next section.
