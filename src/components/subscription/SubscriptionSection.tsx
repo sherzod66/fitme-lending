@@ -8,6 +8,7 @@ import { subscriptionPlanService } from '../../service/subscription-plan.service
 import { ISubscriptionPlan } from '../../types/subscription-plan.types'
 import { formatSum } from '../../utils/formatPrice'
 import SectionIntro from '../sections/SectionIntro'
+import ColumnRules from '../ui/ColumnRules'
 import Loading from '../ui/loader/loading'
 import Reveal from '../ui/motion/Reveal'
 
@@ -108,6 +109,8 @@ export default function SubscriptionSection() {
 			id='subscription'
 			className='grain relative isolate overflow-hidden bg-ink py-28 sm:py-32 lg:py-40'
 		>
+			<ColumnRules />
+
 			<div className='relative mx-auto max-w-edge px-5 sm:px-8 lg:px-14'>
 				<SectionIntro
 					index='05'

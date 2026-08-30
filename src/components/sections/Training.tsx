@@ -1,6 +1,7 @@
 import clsx from 'clsx'
 import { useTranslation } from 'react-i18next'
 
+import ColumnRules from '../ui/ColumnRules'
 import PhoneShot from '../ui/PhoneShot'
 import Reveal from '../ui/motion/Reveal'
 
@@ -34,6 +35,8 @@ export default function Training() {
 			id='training'
 			className='grain relative isolate overflow-hidden bg-ink py-28 sm:py-32 lg:py-40'
 		>
+			<ColumnRules />
+
 			<div className='relative mx-auto max-w-edge px-5 sm:px-8 lg:px-14'>
 				<SectionIntro
 					index='01'

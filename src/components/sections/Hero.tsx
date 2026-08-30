@@ -2,6 +2,7 @@ import { motion, useReducedMotion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 
 import { useStoreLink } from '../../hooks/useStoreLink'
+import ColumnRules from '../ui/ColumnRules'
 import FloatingStat from '../ui/FloatingStat'
 import PhoneShot from '../ui/PhoneShot'
 import Reveal from '../ui/motion/Reveal'
@@ -25,8 +26,7 @@ export default function Hero() {
 				<div className='absolute left-1/2 top-[6%] h-[62vh] w-[62vh] -translate-x-1/2 rounded-full bg-accent/[0.16] blur-[150px] lg:left-auto lg:right-[4%] lg:top-[2%] lg:translate-x-0 lg:bg-accent/20' />
 			</motion.div>
 
-			{/* Editorial column rules */}
-			<div className='pointer-events-none absolute inset-y-0 left-1/2 hidden w-full max-w-edge -translate-x-1/2 border-x border-white/[0.06] lg:block' />
+			<ColumnRules />
 
 			<div className='relative mx-auto flex min-h-[92svh] max-w-edge flex-col justify-center px-5 pb-16 pt-28 sm:px-8 lg:min-h-[100svh] lg:px-14 lg:pb-0 lg:pt-24'>
 				<div className='grid items-center gap-12 sm:gap-16 lg:grid-cols-12 lg:gap-6'>

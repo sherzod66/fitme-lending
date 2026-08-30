@@ -2,6 +2,7 @@ import { motion, useReducedMotion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 
 import { useStoreLink } from '../../hooks/useStoreLink'
+import ColumnRules from '../ui/ColumnRules'
 import PhoneShot from '../ui/PhoneShot'
 import StoreLink from '../ui/StoreLink'
 import Reveal from '../ui/motion/Reveal'
@@ -23,6 +24,8 @@ export default function Download() {
 			id='download'
 			className='grain relative isolate overflow-hidden bg-ink py-32 text-center sm:py-40 lg:py-48'
 		>
+			<ColumnRules />
+
 			<div className='relative mx-auto flex max-w-edge flex-col items-center px-5 sm:px-8 lg:px-14'>
 				<Reveal
 					delay={0.5}

@@ -3,6 +3,7 @@ import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import ProgressDashboard from '../mockups/ProgressDashboard'
+import ColumnRules from '../ui/ColumnRules'
 import CountUp from '../ui/CountUp'
 import FloatingStat from '../ui/FloatingStat'
 import PhoneShot from '../ui/PhoneShot'
@@ -70,6 +71,8 @@ export default function Progress() {
 			id='progress'
 			className='grain relative isolate overflow-hidden bg-ink py-28 sm:py-32 lg:py-40'
 		>
+			<ColumnRules />
+
 			<div className='relative mx-auto max-w-edge px-5 sm:px-8 lg:px-14'>
 				<div className='lg:grid lg:grid-cols-12 lg:gap-8'>
 					{/* Text sits low on the right, deliberately off the visual centre */}

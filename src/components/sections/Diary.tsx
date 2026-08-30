@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next'
 
 import DiaryCard from '../mockups/DiaryCard'
 import DiaryTimeline from '../mockups/DiaryTimeline'
+import ColumnRules from '../ui/ColumnRules'
 import PhoneShot from '../ui/PhoneShot'
 import { EASE_PREMIUM } from '../ui/motion/easing'
 
@@ -56,6 +57,8 @@ export default function Diary() {
 			id='diary'
 			className='grain relative isolate overflow-hidden bg-ink py-28 sm:py-32 lg:py-40'
 		>
+			<ColumnRules />
+
 			<div className='relative mx-auto max-w-edge px-5 sm:px-8 lg:px-14'>
 				{/* Text and history share the left column; the device owns the right one. */}
 				<div className='lg:grid lg:grid-cols-12 lg:grid-rows-[auto_1fr] lg:gap-x-8'>

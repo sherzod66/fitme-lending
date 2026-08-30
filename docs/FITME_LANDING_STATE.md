@@ -86,8 +86,16 @@ Section shell used everywhere (keep identical for new sections):
 
 ```tsx
 <section id='...' className='grain relative isolate overflow-hidden bg-ink py-28 sm:py-32 lg:py-40'>
+  <ColumnRules />
+
   <div className='relative mx-auto max-w-edge px-5 sm:px-8 lg:px-14'>
 ```
+
+`ui/ColumnRules` draws the two `border-white/[0.06]` hairlines at the edges of the `max-w-edge`
+container, from `lg` up. Every section renders its own copy with `inset-y-0`; because sections are
+adjacent and spaced with padding rather than margins, the copies join into **one continuous rule running
+the whole page**. Two constraints keep it working: it must be the section's first child (so content paints
+over it), and sections must never gain vertical margins.
 
 ## 7. Implemented sections
 
@@ -235,6 +243,7 @@ separately, not scaled.
 | `ui/ProgressLineChart` | self-drawing red line chart (Catmull-Rom → bezier), area fill, end dot. |
 | `ui/LanguageMenu` | compact `RU` switcher. |
 | `mockups/DiaryCard` | floating product event card: icon + title + meta, same shell and idle float as `FloatingStat`. `accent` turns the icon red. |
+| `ui/ColumnRules` | the page-wide editorial column hairlines. Drop it in as the first child of any new section. |
 | `ui/StoreLink` | one secondary store option (`platform='ios' \| 'android'`), glyph + name, links from `constants/constants`. |
 | `hooks/useActiveSection` | IntersectionObserver scroll-spy; ignores sections that do not exist yet. |
 | `hooks/useMediaQuery`, `hooks/useStoreLink` | breakpoint state; Apple UA → App Store, else Google Play. |
@@ -262,7 +271,9 @@ separately, not scaled.
 ## 12. Intentionally NOT implemented yet
 
 - **Footer** (`layout/Footer.tsx`) is the last place still on the old `zinc-950` / `red-500` palette —
-  the only remaining legacy markup on the page. `TODO`
+  the only remaining legacy markup on the page. It is also where the column rules stop: they run from the
+  Hero to the closing `Download` frame and deliberately do not enter the footer, since it has a different
+  background and is shared with `/profile` and `/auth`. `TODO`
 - Three legacy blocks were **removed** as superseded: the `#features` 6-card grid, the `#roles`
   three-column block, and the old final CTA (red gradient, white store buttons). Their translation keys
   (`features.*`, `roles.*`, `cta.*`) are still in all three locales but are now unused — harmless, and
