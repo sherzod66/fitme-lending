@@ -50,6 +50,21 @@
       "streak": "12 day streak"
     }
   },
+  "nutrition": {
+    "headline": "Keep nutrition under control.",
+    "statement": "Track what you eat and understand what actually works for you.",
+    "panel": {
+      "today": "Today",
+      "goal": "goal",
+      "kcal": "kcal",
+      "protein": "Protein",
+      "carbs": "Carbs",
+      "fats": "Fats",
+      "breakfast": "Breakfast",
+      "lunch": "Lunch",
+      "dinner": "Dinner"
+    }
+  },
   "features": {
     "title": "Powerful Features for Your Fitness Journey",
     "trainers": {

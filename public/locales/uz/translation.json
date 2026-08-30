@@ -50,6 +50,21 @@
       "streak": "12 kun ketma-ket"
     }
   },
+  "nutrition": {
+    "headline": "Ovqatlanishni nazoratda tut.",
+    "statement": "Ratsionni kuzat va senga nima haqiqatan mos kelishini tushun.",
+    "panel": {
+      "today": "Bugun",
+      "goal": "maqsad",
+      "kcal": "kkal",
+      "protein": "Protein",
+      "carbs": "Uglevodlar",
+      "fats": "Yog'lar",
+      "breakfast": "Nonushta",
+      "lunch": "Tushlik",
+      "dinner": "Kechki ovqat"
+    }
+  },
   "features": {
     "title": "Fitness sayohatingiz uchun kuchli funksiyalar",
     "trainers": {

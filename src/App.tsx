@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 
 import Layout from './components/layout/Layout'
 import Hero from './components/sections/Hero'
+import Nutrition from './components/sections/Nutrition'
 import Progress from './components/sections/Progress'
 import Training from './components/sections/Training'
 import SubscriptionSection from './components/subscription/SubscriptionSection'
@@ -17,6 +18,7 @@ function App() {
 			<Hero />
 			<Training />
 			<Progress />
+			<Nutrition />
 
 			{/* Features Section */}
 			<section
