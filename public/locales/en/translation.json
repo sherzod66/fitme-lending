@@ -65,6 +65,32 @@
       "dinner": "Dinner"
     }
   },
+  "diary": {
+    "headline": "Your journey, all in one place.",
+    "statement": "Every workout is saved — and adds up to a story you write yourself.",
+    "today": "Today",
+    "month": "Mar",
+    "meta": "{{minutes}} min · {{exercises}} exercises",
+    "more": "{{entries}} more entries",
+    "entries": {
+      "legs": "Legs & core",
+      "push": "Chest & triceps",
+      "pull": "Back & biceps",
+      "cardio": "Cardio"
+    },
+    "cards": {
+      "completed": { "title": "Workout completed" },
+      "streak": { "title": "{{days}} day streak", "meta": "Consistency" },
+      "record": { "title": "New personal best", "meta": "Bench press · {{weight}} kg" }
+    }
+  },
+  "download": {
+    "headline": "Start today.",
+    "statement": "FIT.ME — everything for your progress.",
+    "cta": "Download FitMe",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
   "features": {
     "title": "Powerful Features for Your Fitness Journey",
     "trainers": {

@@ -65,6 +65,32 @@
       "dinner": "Kechki ovqat"
     }
   },
+  "diary": {
+    "headline": "Yo'ling — bitta joyda.",
+    "statement": "Har bir mashg'ulot saqlanib qoladi va o'zing yozadigan tarixga qo'shiladi.",
+    "today": "Bugun",
+    "month": "mar",
+    "meta": "{{minutes}} daq · {{exercises}} mashq",
+    "more": "Yana {{entries}} yozuv",
+    "entries": {
+      "legs": "Oyoq va kor",
+      "push": "Ko'krak va triseps",
+      "pull": "Orqa va biseps",
+      "cardio": "Kardio"
+    },
+    "cards": {
+      "completed": { "title": "Mashg'ulot tugallandi" },
+      "streak": { "title": "{{days}} kun ketma-ket", "meta": "Barqarorlik" },
+      "record": { "title": "Yangi maksimum", "meta": "Yotib ko'tarish · {{weight}} kg" }
+    }
+  },
+  "download": {
+    "headline": "Bugun boshla.",
+    "statement": "FIT.ME — natijang uchun hammasi.",
+    "cta": "FitMe'ni yuklab olish",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
   "features": {
     "title": "Fitness sayohatingiz uchun kuchli funksiyalar",
     "trainers": {

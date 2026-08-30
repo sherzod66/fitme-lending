@@ -65,6 +65,32 @@
       "dinner": "Ужин"
     }
   },
+  "diary": {
+    "headline": "Твой путь — в одном месте.",
+    "statement": "Каждая тренировка сохраняется — и складывается в историю, которую ты пишешь сам.",
+    "today": "Сегодня",
+    "month": "мар",
+    "meta": "{{minutes}} мин · {{exercises}} упражнений",
+    "more": "Ещё {{entries}} записей",
+    "entries": {
+      "legs": "Ноги и кор",
+      "push": "Грудь и трицепс",
+      "pull": "Спина и бицепс",
+      "cardio": "Кардио"
+    },
+    "cards": {
+      "completed": { "title": "Тренировка завершена" },
+      "streak": { "title": "{{days}} дней подряд", "meta": "Регулярность" },
+      "record": { "title": "Новый максимум", "meta": "Жим лёжа · {{weight}} кг" }
+    }
+  },
+  "download": {
+    "headline": "Начни сегодня.",
+    "statement": "FIT.ME — всё для твоего прогресса.",
+    "cta": "Скачать FitMe",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
   "features": {
     "title": "Мощные функции для вашего фитнес-путешествия",
     "trainers": {
