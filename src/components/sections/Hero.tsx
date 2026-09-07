@@ -16,7 +16,7 @@ export default function Hero() {
 	const shouldReduceMotion = useReducedMotion()
 
 	return (
-		<section className='grain relative isolate flex min-h-[88svh] flex-col overflow-hidden bg-ink sm:min-h-[100svh]'>
+		<section className='grain relative isolate flex flex-col overflow-hidden bg-ink min-h-[100svh]'>
 			{/* Single red light source, behind the athletes */}
 			<motion.div
 				initial={{ opacity: 0 }}
@@ -33,7 +33,7 @@ export default function Hero() {
 				initial={{ opacity: 0, scale: shouldReduceMotion ? 1 : 1.05 }}
 				animate={{ opacity: 1, scale: 1 }}
 				transition={{ duration: 2.4, ease: EASE_PREMIUM }}
-				className='pointer-events-none absolute inset-x-0 bottom-5'
+				className='pointer-events-none absolute inset-x-0 bottom-32 sm:bottom-0'
 			>
 				{/* Both sources are cropped to the same 1011:941 box, so on phones the
 				    shot's height is always `100 / 1.074 = 93vw` — the figure the headline
@@ -60,15 +60,15 @@ export default function Hero() {
 			</motion.div>
 
 			{/* Seats them into the darkness and carries the buttons */}
-			<div className='pointer-events-none absolute inset-x-0 bottom-0 h-[34svh] bg-gradient-to-t from-ink via-ink/80 to-transparent' />
+			<div className='pointer-events-none absolute inset-x-0 bottom-0 h-[28svh] bg-gradient-to-t from-ink via-ink/80 to-transparent' />
 
-			<div className='relative mx-auto flex w-full max-w-edge flex-1 flex-col items-center justify-end px-5 pb-14 text-center sm:justify-between sm:px-8 sm:pb-16 sm:pt-28 lg:px-14 lg:pt-32'>
+			<div className='relative mx-auto flex w-full max-w-edge flex-1 flex-col items-center justify-end px-5 pb-8 text-center sm:justify-between sm:px-8 sm:pb-16 sm:pt-28 lg:px-14 lg:pt-32'>
 				{/* On phones the headline hangs off the top edge of the shot, so the dark
 				    space gathers above the words instead of splitting them from the
 				    athletes. From `sm` up it goes back to the top of the frame.
 				    The mobile scale is the largest that still keeps "Твой прогресс." on
 				    one line at 320px — raising it wraps the line. */}
-				<h1 className='absolute inset-x-5 bottom-[calc(93vw_+_5rem)] text-[clamp(2.25rem,11vw,4rem)] font-semibold leading-[0.94] tracking-tightest sm:static sm:inset-x-auto sm:bottom-auto sm:text-[clamp(2.1rem,5vw,3.4rem)] lg:text-[clamp(2.5rem,3.6vw,4rem)]'>
+				<h1 className='absolute inset-x-5 bottom-[calc(93vw_+_12rem)] text-[clamp(2.25rem,11vw,4rem)] font-semibold leading-[0.94] tracking-tightest sm:static sm:inset-x-auto sm:bottom-auto sm:text-[clamp(2.1rem,5vw,3.4rem)] lg:text-[clamp(2.5rem,3.6vw,4rem)]'>
 					<RevealLine delay={0.15}>{t('hero.line1')}</RevealLine>
 					<RevealLine delay={0.27}>{t('hero.line2')}</RevealLine>
 					<RevealLine delay={0.39}>
