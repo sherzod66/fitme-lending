@@ -1,167 +1,172 @@
 {
-  "nav": {
-    "features": "Imkoniyatlar",
-    "subscription": "Obuna",
-    "forEveryone": "Hammaga",
-    "download": "Tez kunda",
-    "training": "Mashg'ulotlar",
-    "progress": "Natijalar",
-    "nutrition": "Ovqatlanish",
-    "diary": "Kundalik",
-    "downloadApp": "Ilovani yuklab olish",
-    "menu": "Menyu",
-    "close": "Yopish",
-    "account": "Akkaunt",
-    "login": "Kirish"
-  },
-  "hero": {
-    "line1": "Tanang.",
-    "line2": "Rejang.",
-    "line3": "",
-    "line3Accent": "Natijang.",
-    "lead": "Mashg'ulot, natija va sog'lom odatlar uchun kerakli hamma narsa — bitta ilovada.",
-    "cta": "FitMe'ni yuklab olish",
-    "stores": "App Store · Google Play",
-    "cards": {
-      "workouts": { "value": "12", "label": "mashg'ulot" },
-      "strength": { "value": "+18%", "label": "kuch" },
-      "consistency": { "value": "86%", "label": "barqarorlik" }
-    }
-  },
-  "training": {
-    "headline": "Mashg'ulotlar",
-    "statement": "Tayyor reja bo'yicha mashq qil yoki o'zingniki yarat."
-  },
-  "progress": {
-    "headline": "O'zgarishingizni ko'ring.",
-    "statement": "Har bir mashg'ulot natijaga qo'shiladi — va siz uni raqamlarda ko'rasiz.",
-    "stats": {
-      "workouts": "mashg'ulot",
-      "strength": "kuch",
-      "consistency": "barqarorlik"
-    },
-    "panel": {
-      "exercise": "Yotib ko'tarish",
-      "range": "6 oy",
-      "month": "Mart",
-      "weight": "vazn",
-      "chest": "ko'krak",
-      "waist": "bel",
-      "streak": "12 kun ketma-ket"
-    }
-  },
-  "nutrition": {
-    "headline": "Ovqatlanishni nazoratda tut.",
-    "statement": "Ratsionni kuzat va senga nima haqiqatan mos kelishini tushun.",
-    "panel": {
-      "today": "Bugun",
-      "goal": "maqsad",
-      "kcal": "kkal",
-      "protein": "Protein",
-      "carbs": "Uglevodlar",
-      "fats": "Yog'lar",
-      "breakfast": "Nonushta",
-      "lunch": "Tushlik",
-      "dinner": "Kechki ovqat"
-    }
-  },
-  "diary": {
-    "headline": "Yo'ling — bitta joyda.",
-    "statement": "Har bir mashg'ulot saqlanib qoladi va o'zing yozadigan tarixga qo'shiladi.",
-    "today": "Bugun",
-    "month": "mar",
-    "meta": "{{minutes}} daq · {{exercises}} mashq",
-    "more": "Yana {{entries}} yozuv",
-    "entries": {
-      "legs": "Oyoq va kor",
-      "push": "Ko'krak va triseps",
-      "pull": "Orqa va biseps",
-      "cardio": "Kardio"
-    },
-    "cards": {
-      "completed": { "title": "Mashg'ulot tugallandi" },
-      "streak": { "title": "{{days}} kun ketma-ket", "meta": "Barqarorlik" },
-      "record": { "title": "Yangi maksimum", "meta": "Yotib ko'tarish · {{weight}} kg" }
-    }
-  },
-  "download": {
-    "headline": "Bugun boshla.",
-    "statement": "FIT.ME — natijang uchun hammasi.",
-    "cta": "FitMe'ni yuklab olish",
-    "appStore": "App Store",
-    "googlePlay": "Google Play"
-  },
-  "features": {
-    "title": "Fitness sayohatingiz uchun kuchli funksiyalar",
-    "trainers": {
-      "title": "Sertifikatlangan shaxsiy murabbiylar",
-      "description": "Fitness yo'lingizni yo'naltiruvchi ekspert murabbiylar bilan bog'laning"
-    },
-    "tracking": {
-      "title": "Taraqqiyotni kuzatish",
-      "description": "Batafsil tahlillar va ma'lumotlar bilan yaxshilanishlarni kuzating"
-    },
-    "measurements": {
-      "title": "Tana o'lchovlari",
-      "description": "Tana tarkibidagi o'zgarishlarni vaqt o'tishi bilan kuzating"
-    },
-    "library": {
-      "title": "Mashqlar kutubxonasi",
-      "description": "Mukammal shakl uchun video qo'llanmalarga kirish"
-    },
-    "nutrition": {
-      "title": "Ovqatlanish rejasi",
-      "description": "Fitness maqsadlaringizga moslashtirilgan ovqatlanish rejalari"
-    },
-    "workouts": {
-      "title": "Mashq dasturlari",
-      "description": "Maqsadlaringizga moslashtirilgan mashq rejalari"
-    }
-  },
-  "subscription": {
-    "title": "FIT.ME premium obunasi",
-    "subtitle": "Servisning barcha funksiyalaridan foydalaning va orzu qilgan tanaga erishing",
-    "featuresTitle": "Obunaga nimalar kiradi",
-    "plansTitle": "Tariflar",
-    "perMonth": "oyiga",
-    "popular": "Mashhur",
-    "buyButton": "Obunani rasmiylashtirish",
-    "termsPrefix": "Obunani rasmiylashtirish orqali siz quyidagiga rozilik bildirasiz:",
-    "termsLink": "obunani to'lash bo'yicha foydalanuvchi kelishuvi",
-    "paymeNote": "To'lov Payme orqali so'mda (UZS) amalga oshiriladi",
-    "noPlans": "Tariflar vaqtincha mavjud emas",
-    "features": {
-      "workoutDiary": "Mashg'ulotlar kundaligi",
-      "workoutPrograms": "Mashg'ulot dasturlari",
-      "nutritionPlans": "Ovqatlanish rejalari",
-      "foodScanner": "Ovqat skaneri",
-      "trainerInteraction": "Murabbiy bilan aloqa",
-      "customPrograms": "O'z mashg'ulot dasturlarini tuzish",
-      "trainingVideos": "O'quv videolarini ko'rish"
-    }
-  },
-  "roles": {
-    "title": "Fitnesdagi har bir kishi uchun",
-    "beginners": {
-      "title": "Boshlang'ichlar",
-      "description": "Yo'naltirilgan mashqlar va ekspert yordami bilan fitness sayohatingizni boshlang"
-    },
-    "advanced": {
-      "title": "Ilg'or sportchilar",
-      "description": "Mashg'ulotlaringizni yangi darajaga ko'taring"
-    },
-    "trainers": {
-      "title": "Shaxsiy murabbiylar",
-      "description": "Biznesingizni rivojlantiring va mijozlarni samarali boshqaring"
-    }
-  },
-  "cta": {
-    "title": "Fitness sayohatingizni bugun boshlang",
-    "subtitle": "FitMe bilan hayotini o'zgartirgan minglab foydalanuvchilarga qo'shiling",
-    "comingSoon": "Tez kunda",
-    "becomeTrainer": "Murabbiy bo'ling"
-  },
-  "footer": {
-    "rights": "© 2025 FitMe. Barcha huquqlar himoyalangan."
-  }
+	"nav": {
+		"features": "Imkoniyatlar",
+		"subscription": "Obuna",
+		"forEveryone": "Hammaga",
+		"download": "Tez kunda",
+		"training": "Mashg'ulotlar",
+		"progress": "Natijalar",
+		"nutrition": "Ovqatlanish",
+		"diary": "Kundalik",
+		"downloadApp": "Ilovani yuklab olish",
+		"menu": "Menyu",
+		"close": "Yopish",
+		"account": "Akkaunt",
+		"login": "Kirish"
+	},
+	"hero": {
+		"line1": "Tanang.",
+		"line2": "Rejang.",
+		"line3": "",
+		"line3Accent": "Natijang.",
+		"lead": "Mashg'ulot, natija va sog'lom odatlar uchun kerakli hamma narsa — bitta ilovada.",
+		"cta": "FitMe'ni yuklab olish",
+		"stores": "App Store · Google Play",
+		"cards": {
+			"workouts": { "value": "12", "label": "mashg'ulot" },
+			"strength": { "value": "+18%", "label": "kuch" },
+			"consistency": { "value": "86%", "label": "barqarorlik" }
+		}
+	},
+	"training": {
+		"headline": "Mashg'ulotlar",
+		"statement": "Tayyor reja bo'yicha mashq qil yoki o'zingniki yarat."
+	},
+	"progress": {
+		"headline": "O'zgarishingizni ko'ring.",
+		"statement": "Har bir mashg'ulot natijaga qo'shiladi — va siz uni raqamlarda ko'rasiz.",
+		"stats": {
+			"workouts": "mashg'ulot",
+			"strength": "kuch",
+			"consistency": "barqarorlik"
+		},
+		"panel": {
+			"exercise": "Yotib ko'tarish",
+			"range": "6 oy",
+			"month": "Mart",
+			"weight": "vazn",
+			"chest": "ko'krak",
+			"waist": "bel",
+			"streak": "12 kun ketma-ket"
+		}
+	},
+	"nutrition": {
+		"headline": "Ovqatlanishni nazoratda tut.",
+		"statement": "Ratsionni kuzat va senga nima haqiqatan mos kelishini tushun.",
+		"panel": {
+			"today": "Bugun",
+			"goal": "maqsad",
+			"kcal": "kkal",
+			"protein": "Protein",
+			"carbs": "Uglevodlar",
+			"fats": "Yog'lar",
+			"breakfast": "Nonushta",
+			"lunch": "Tushlik",
+			"dinner": "Kechki ovqat"
+		}
+	},
+	"diary": {
+		"headline": "Yo'ling — bitta joyda.",
+		"statement": "Har bir mashg'ulot saqlanib qoladi va o'zing yozadigan tarixga qo'shiladi.",
+		"today": "Bugun",
+		"month": "mar",
+		"meta": "{{minutes}} daq · {{exercises}} mashq",
+		"more": "Yana {{entries}} yozuv",
+		"entries": {
+			"legs": "Oyoq va kor",
+			"push": "Ko'krak va triseps",
+			"pull": "Orqa va biseps",
+			"cardio": "Kardio"
+		},
+		"cards": {
+			"completed": { "title": "Mashg'ulot tugallandi" },
+			"streak": { "title": "{{days}} kun ketma-ket", "meta": "Barqarorlik" },
+			"record": { "title": "Yangi maksimum", "meta": "Yotib ko'tarish · {{weight}} kg" }
+		}
+	},
+	"results": {
+		"headline": "Foydalanuvchilarning natijalari",
+		"before": "Oldin",
+		"after": "Keyin"
+	},
+	"download": {
+		"headline": "Bugun boshla.",
+		"statement": "FIT.ME — natijang uchun hammasi.",
+		"cta": "FitMe'ni yuklab olish",
+		"appStore": "App Store",
+		"googlePlay": "Google Play"
+	},
+	"features": {
+		"title": "Fitness sayohatingiz uchun kuchli funksiyalar",
+		"trainers": {
+			"title": "Sertifikatlangan shaxsiy murabbiylar",
+			"description": "Fitness yo'lingizni yo'naltiruvchi ekspert murabbiylar bilan bog'laning"
+		},
+		"tracking": {
+			"title": "Taraqqiyotni kuzatish",
+			"description": "Batafsil tahlillar va ma'lumotlar bilan yaxshilanishlarni kuzating"
+		},
+		"measurements": {
+			"title": "Tana o'lchovlari",
+			"description": "Tana tarkibidagi o'zgarishlarni vaqt o'tishi bilan kuzating"
+		},
+		"library": {
+			"title": "Mashqlar kutubxonasi",
+			"description": "Mukammal shakl uchun video qo'llanmalarga kirish"
+		},
+		"nutrition": {
+			"title": "Ovqatlanish rejasi",
+			"description": "Fitness maqsadlaringizga moslashtirilgan ovqatlanish rejalari"
+		},
+		"workouts": {
+			"title": "Mashq dasturlari",
+			"description": "Maqsadlaringizga moslashtirilgan mashq rejalari"
+		}
+	},
+	"subscription": {
+		"title": "FIT.ME premium obunasi",
+		"subtitle": "Servisning barcha funksiyalaridan foydalaning va orzu qilgan tanaga erishing",
+		"featuresTitle": "Obunaga nimalar kiradi",
+		"plansTitle": "Tariflar",
+		"perMonth": "oyiga",
+		"popular": "Mashhur",
+		"buyButton": "Obunani rasmiylashtirish",
+		"termsPrefix": "Obunani rasmiylashtirish orqali siz quyidagiga rozilik bildirasiz:",
+		"termsLink": "obunani to'lash bo'yicha foydalanuvchi kelishuvi",
+		"paymeNote": "To'lov Payme orqali so'mda (UZS) amalga oshiriladi",
+		"noPlans": "Tariflar vaqtincha mavjud emas",
+		"features": {
+			"workoutDiary": "Mashg'ulotlar kundaligi",
+			"workoutPrograms": "Mashg'ulot dasturlari",
+			"nutritionPlans": "Ovqatlanish rejalari",
+			"foodScanner": "Ovqat skaneri",
+			"trainerInteraction": "Murabbiy bilan aloqa",
+			"customPrograms": "O'z mashg'ulot dasturlarini tuzish",
+			"trainingVideos": "O'quv videolarini ko'rish"
+		}
+	},
+	"roles": {
+		"title": "Fitnesdagi har bir kishi uchun",
+		"beginners": {
+			"title": "Boshlang'ichlar",
+			"description": "Yo'naltirilgan mashqlar va ekspert yordami bilan fitness sayohatingizni boshlang"
+		},
+		"advanced": {
+			"title": "Ilg'or sportchilar",
+			"description": "Mashg'ulotlaringizni yangi darajaga ko'taring"
+		},
+		"trainers": {
+			"title": "Shaxsiy murabbiylar",
+			"description": "Biznesingizni rivojlantiring va mijozlarni samarali boshqaring"
+		}
+	},
+	"cta": {
+		"title": "Fitness sayohatingizni bugun boshlang",
+		"subtitle": "FitMe bilan hayotini o'zgartirgan minglab foydalanuvchilarga qo'shiling",
+		"comingSoon": "Tez kunda",
+		"becomeTrainer": "Murabbiy bo'ling"
+	},
+	"footer": {
+		"rights": "© 2025 FitMe. Barcha huquqlar himoyalangan."
+	}
 }

@@ -11,14 +11,30 @@ The user supplies one section spec at a time and reviews it before the next one.
 clean for all landing code; one pre-existing unrelated error remains (unused `CalendarCheck` import in
 `src/components/profile/ActiveSubscriptionCard.tsx` — do not fix unless asked).
 
-**Nothing in the landing has been verified visually in a browser yet.** Headless screenshots are
-impractical here: the idle float animations use `repeat: Infinity`, which starves Chrome's
-`--virtual-time-budget` and hangs the capture. Review with `npm run dev` by eye.
+**The landing has only been verified visually on a wide desktop viewport (1440×900), and only the hero.**
+Headless screenshots are close to useless on this page and cost minutes per attempt: the idle float
+animations use `repeat: Infinity`, which starves Chrome's `--virtual-time-budget`, so `whileInView`
+reveals stay at `opacity: 0` and successive captures of the same build disagree with each other about
+geometry. Two real layout bugs were still found that way (see §11.8 and the `picture` note in §7), but
+**trust `npm run dev` and a real phone over any headless capture** — everything below `lg`, and every
+section under the hero, still needs a human eye.
 
 ## 1. Stack
 
 Vite · React 18 · TypeScript · Tailwind 3.4 · Framer Motion · lucide-react · react-i18next · react-router-dom.
 Tabs for indentation, single quotes, no semicolons (prettier + import sort plugin).
+
+## 1a. Client's product direction — read before proposing anything
+
+The client restated the goal in Sept 2026, and it overrides the storytelling instinct of `TZ.txt`:
+**people will not read the page.** They come for a result, and the site's only job is to get them to the
+store with the least possible time spent deciding. His order: a photo of real bodies, then the store
+buttons, then before/after shots of his own clients. No feature explanations — that copy already lives in
+the app stores.
+
+The page follows that at the top (`Hero` → `Results`) and keeps the earlier narrative sections
+underneath for the minority who scroll. **When in doubt, cut text and shorten the path to the store
+buttons.** Do not add explanatory copy to the first screen.
 
 ## 2. Visual design system
 
@@ -65,20 +81,25 @@ Other tokens: `maxWidth.edge` = `1440px` (container), `letterSpacing.tightest` =
 
 ```
 public/
+  images/hero.{png,webp} + hero-mobile.webp  the athletes, alpha cut-out (see §11)
   images/screen.png            placeholder device render (see §11)
   images/food/{plate,avocado,berries,greens}.jpg
+  images/results/              EMPTY — real before/after photos go here
   locales/{ru,en,uz}/translation.json
 src/
-  App.tsx                      section order lives here
+  App.tsx                      section order lives here, nothing else
   index.css
   components/
     layout/{Layout,Header,MobileNav,Footer}.tsx
-    sections/{Hero,Training,Progress,Nutrition,Diary,Download,SectionIntro}.tsx
+    sections/{Hero,Results,Training,Progress,Nutrition,Diary,Download,SectionIntro}.tsx
+    subscription/SubscriptionSection.tsx
     mockups/{ProgressDashboard,NutritionPanel,DiaryTimeline,DiaryCard}.tsx
-    ui/{PhoneShot,FloatingStat,CountUp,ProgressLineChart,LanguageMenu,StoreLink}.tsx
+    ui/{PhoneShot,FloatingStat,CountUp,ProgressLineChart,LanguageMenu,ColumnRules}.tsx
+    ui/{StoreButtons,StoreLink}.tsx
     ui/motion/{Reveal,RevealLine,easing}.ts(x)
   hooks/{useActiveSection,useMediaQuery,useStoreLink}.ts
   constants/nav.ts             NAV_SECTIONS + LANGUAGES
+  constants/stores.ts          store links + brand glyph paths
   constants/constants.ts       android_link, ios_link (pre-existing)
 ```
 
@@ -99,8 +120,15 @@ over it), and sections must never gain vertical margins.
 
 ## 7. Implemented sections
 
-Order in `App.tsx`: `Hero` → `Training` → `Progress` → `Nutrition` → `Diary` → `SubscriptionSection`
-→ `Download`. `App.tsx` is now nothing but this list; every block on the page is a real component.
+Order in `App.tsx`: `Hero` → `Results` → `Training` → `Progress` → `Nutrition` → `Diary` →
+`SubscriptionSection` → `Download`. `App.tsx` is now nothing but this list; every block on the page is a
+real component.
+
+The first two blocks are the conversion path the client asked for (§1a): photo, store buttons, proof.
+Everything from `Training` down is the earlier narrative tour, kept below the fold on purpose — the user
+chose to keep it rather than delete it, so it must stay reachable but must never be promoted above
+`Results`. The numbered sections therefore start after an unnumbered block; that is intended, since
+`Results` is proof, not part of the product tour.
 
 ### Header + mobile nav — `COMPLETED — DO NOT REDESIGN`
 
@@ -115,15 +143,36 @@ an account link instead; the header is always compact there.
 
 ### Hero — `COMPLETED — DO NOT REDESIGN`
 
-`sections/Hero.tsx`. No `id`. Purpose: make the visitor download the app within 3 seconds.
-Layout: `min-h-[92svh] lg:min-h-[100svh]`, 12-col grid. Left col-span-6: three-line headline
-"Твоё тело. / Твой план. / Твой прогресс." with **прогресс** in red, short lead, large red CTA
-"Скачать FitMe" + small "App Store · Google Play". Right col-span-6: device sized by height
-(`lg:h-[min(78vh,800px)]`), bleeding `-mb-16` below the row and `-mr-4/-mr-6` into the container padding.
-Three `FloatingStat` cards (12 тренировок / **+18%** сила / 86% регулярность) overlap the device edges,
-hidden below `md`. One red radial glow, editorial `border-x` column rules on `lg`.
-Load sequence: glow fade 1.8s → headline lines unmask at 0.1/0.22/0.34 → device fade+scale 0.95→1 (1.5s,
-delay 0.3) → cards at 1.05/1.2/1.35. Device then breathes `y: [0,-12,0]` over 11s.
+`sections/Hero.tsx`. No `id`. Rebuilt in Sept 2026 around the client's direction (§1a): the athletes and
+the two stores, nothing else. **The phone mockup, the lead paragraph and the floating stat cards were
+removed from this section on purpose — do not put them back.**
+Layout: `min-h-[100svh]` flex column, centred. Three-line headline "Твоё тело. / Твой план. /
+Твой прогресс." (**прогресс** in red) sits at the top, `StoreButtons` at the bottom, and
+the shot fills the space between them, bottom-anchored.
+The photo is sized by its **box**, not by the image: `<picture>` carries
+`h-[46svh] sm:h-[58svh] xl:h-[64svh] w-full` and the `<img>` inside is
+`h-full w-full object-contain object-bottom`. That is deliberate — a narrow or short window then scales
+the athletes down instead of slicing an arm off the frame, which matters because the bodies *are* the
+message. `picture` has to carry the box: as a bare child it shrinks to the image's intrinsic width and
+the sizing silently breaks (this was a real bug, twice).
+A `bg-gradient-to-t from-ink via-ink/80` scrim over the bottom `34svh` seats the athletes in the darkness
+and carries the buttons. One `bg-accent/[0.13]` glow behind them.
+The headline runs a smaller scale than the closing frame (`clamp(2.1rem,7.5vw,3.4rem)` /
+`lg:clamp(2.5rem,3.6vw,4rem)`) so the photo stays dominant; the clearance between the last headline line
+and the top of the photo is deliberate and tight, so **do not enlarge either of them without checking a
+short desktop window (~600px tall)**.
+Load sequence: glow fades over 2s, the shot fades and scales `1.05 → 1` over 2.4s (a slow push-in),
+headline lines unmask at 0.15/0.27/0.39, buttons last at 0.9.
+
+### Results (before / after) — `COMPLETED — DO NOT REDESIGN`
+
+`sections/Results.tsx`, `id='results'`. Directly under the hero because it is the client's proof and his
+second priority. Headline "Результаты моих учеников" and **nothing else** — no description by design.
+Three pairs of portrait shots in `sm:grid-cols-2 lg:grid-cols-3`, each pair a `grid-cols-2` of 3:4 tiles
+with "До" / "После" chips; the "После" chip is the only red in the section.
+**The photos are placeholders.** Real ones go in `public/images/results`; fill `before` / `after` in the
+`PAIRS` constant at the top of the file and the placeholder state disappears on its own. A drag-to-compare
+slider was discussed and deferred until the real photos exist, since it only works with matched poses.
 
 ### 01 Training — `COMPLETED — DO NOT REDESIGN`
 
@@ -244,9 +293,11 @@ separately, not scaled.
 | `ui/LanguageMenu` | compact `RU` switcher. |
 | `mockups/DiaryCard` | floating product event card: icon + title + meta, same shell and idle float as `FloatingStat`. `accent` turns the icon red. |
 | `ui/ColumnRules` | the page-wide editorial column hairlines. Drop it in as the first child of any new section. |
-| `ui/StoreLink` | one secondary store option (`platform='ios' \| 'android'`), glyph + name, links from `constants/constants`. |
+| `ui/StoreButtons` | both stores as real buttons; the visitor's platform is listed first and filled red. The page's main action. |
+| `ui/StoreLink` | one quiet secondary store option (`platform='ios' \| 'android'`), glyph + name. |
 | `hooks/useActiveSection` | IntersectionObserver scroll-spy; ignores sections that do not exist yet. |
-| `hooks/useMediaQuery`, `hooks/useStoreLink` | breakpoint state; Apple UA → App Store, else Google Play. |
+| `hooks/useMediaQuery` | breakpoint state. |
+| `hooks/useStoreLink` | exports `usePlatform()` (`'ios' \| 'android'` from the UA) and `useStoreLink()` (the matching store href). |
 
 ## 11. Important implementation decisions
 
@@ -264,8 +315,22 @@ separately, not scaled.
 5. Each section flips the side of the visual to avoid a SaaS two-column rhythm.
 6. All user-facing strings, including mockup panel labels, go through i18n in **all three** locales
    (`ru`, `en`, `uz`). Numbers stay in code.
-7. Only the download CTA uses `useStoreLink`; no giant store badges anywhere (the user rejected them).
-8. Language switcher stays in the header; the account link lives only in the mobile overlay and on
+7. Store links come in two weights and nothing else: `ui/StoreButtons` (both stores as real buttons, used
+   in the hero) and `ui/StoreLink` (a quiet glyph-plus-name link, used in the closing frame). Both read
+   from `constants/stores.ts`, which holds the links and the two brand glyph paths. Official store badge
+   artwork does not exist in the repo and must not be faked.
+8. The hero shot (`public/images/hero.png`, 1536×1024) is **cut out on a real alpha channel**, so it needs
+   no mask or frame — it sits straight on `bg-ink`. Served as WebP through `<picture>`, with the 1.7MB PNG
+   only as a fallback for browsers without WebP:
+   - `hero.webp` (207KB) everywhere from 640px up;
+   - `hero-mobile.webp` (126KB, 900×820) below 640px — the same shot **cropped tight to the silhouette**
+     (the two figures span x 252…1336 of the 1536px original), so fitting it to a phone's width keeps the
+     bodies as large as possible. Regenerate both with:
+   ```
+   cwebp -q 80 -alpha_q 90 -m 6 hero.png -o hero.webp
+   cwebp -q 74 -alpha_q 88 -m 6 -crop 232 0 1124 1024 -resize 900 0 hero.png -o hero-mobile.webp
+   ```
+9. Language switcher stays in the header; the account link lives only in the mobile overlay and on
    interior routes.
 
 ## 12. Intentionally NOT implemented yet
@@ -280,15 +345,24 @@ separately, not scaled.
   worth reusing if any of that copy comes back.
 - The old CTA's "Стать тренером" button exists nowhere on the page now. The user decided to leave it out
   for the moment. `TODO` — decide where the become-a-trainer action belongs.
+- **Real before/after photos** for `Results`. The block ships with placeholder tiles; see §7. `TODO`
 - Real app screenshots. `TODO`
+- The hero no longer shows the app at all — that was the client's call. The device only appears in
+  `01–04` now. Do not "fix" this by adding a phone back to the first screen.
+- The hero's old copy (`hero.lead`, `hero.cta`, `hero.stores`, `hero.cards.*`) is still in all three
+  locales but unused, kept in case any of it comes back.
 - Nothing has been visually reviewed in a browser (see §0). `TODO`
 
 ## 13. Next section to implement
 
-The whole page is now on the design system: Hero → 01–04 → 05 Subscription → closing `Download` frame.
-The only thing left is the **footer**, which still carries the old palette and ends the page on a jarring
-note right after the premium closing frame. Note that `Footer` is rendered by `layout/Layout.tsx`, so it
-also appears on `/profile` and `/auth` — check those routes when restyling it. Wait for the user's spec.
+The conversion path (`Hero` → `Results`) and the whole narrative tour are done. Two things are open:
+
+1. **Swap the before/after placeholders for real photos** once the client sends them, and decide the
+   format then — side-by-side pairs (current) or a drag-to-compare slider, which only works if the poses
+   and framing match.
+2. The **footer**, still on the old `zinc-950` / `red-500` palette, ending the page on a jarring note
+   right after the premium closing frame. Note that `Footer` is rendered by `layout/Layout.tsx`, so it
+   also appears on `/profile` and `/auth` — check those routes when restyling it.
 
 ---
 

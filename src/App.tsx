@@ -6,6 +6,7 @@ import Download from './components/sections/Download'
 import Hero from './components/sections/Hero'
 import Nutrition from './components/sections/Nutrition'
 import Progress from './components/sections/Progress'
+import Results from './components/sections/Results'
 import Training from './components/sections/Training'
 import SubscriptionSection from './components/subscription/SubscriptionSection'
 
@@ -13,6 +14,7 @@ function App() {
 	return (
 		<div className='min-h-screen bg-ink text-white'>
 			<Hero />
+			<Results />
 			<Training />
 			<Progress />
 			<Nutrition />

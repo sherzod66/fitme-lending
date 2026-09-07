@@ -1,167 +1,172 @@
 {
-  "nav": {
-    "features": "Features",
-    "subscription": "Subscription",
-    "forEveryone": "For Everyone",
-    "download": "Coming Soon",
-    "training": "Training",
-    "progress": "Progress",
-    "nutrition": "Nutrition",
-    "diary": "Diary",
-    "downloadApp": "Download the app",
-    "menu": "Menu",
-    "close": "Close",
-    "account": "Account",
-    "login": "Sign in"
-  },
-  "hero": {
-    "line1": "Your body.",
-    "line2": "Your plan.",
-    "line3": "Your",
-    "line3Accent": "progress.",
-    "lead": "Everything you need for training, progress and healthy habits — in a single app.",
-    "cta": "Download FitMe",
-    "stores": "App Store · Google Play",
-    "cards": {
-      "workouts": { "value": "12", "label": "workouts" },
-      "strength": { "value": "+18%", "label": "strength" },
-      "consistency": { "value": "86%", "label": "consistency" }
-    }
-  },
-  "training": {
-    "headline": "Training",
-    "statement": "Train by a ready-made plan or build your own."
-  },
-  "progress": {
-    "headline": "See yourself change.",
-    "statement": "Every workout adds up — and you see the result in numbers.",
-    "stats": {
-      "workouts": "workouts",
-      "strength": "strength",
-      "consistency": "consistency"
-    },
-    "panel": {
-      "exercise": "Bench press",
-      "range": "6 months",
-      "month": "March",
-      "weight": "weight",
-      "chest": "chest",
-      "waist": "waist",
-      "streak": "12 day streak"
-    }
-  },
-  "nutrition": {
-    "headline": "Keep nutrition under control.",
-    "statement": "Track what you eat and understand what actually works for you.",
-    "panel": {
-      "today": "Today",
-      "goal": "goal",
-      "kcal": "kcal",
-      "protein": "Protein",
-      "carbs": "Carbs",
-      "fats": "Fats",
-      "breakfast": "Breakfast",
-      "lunch": "Lunch",
-      "dinner": "Dinner"
-    }
-  },
-  "diary": {
-    "headline": "Your journey, all in one place.",
-    "statement": "Every workout is saved — and adds up to a story you write yourself.",
-    "today": "Today",
-    "month": "Mar",
-    "meta": "{{minutes}} min · {{exercises}} exercises",
-    "more": "{{entries}} more entries",
-    "entries": {
-      "legs": "Legs & core",
-      "push": "Chest & triceps",
-      "pull": "Back & biceps",
-      "cardio": "Cardio"
-    },
-    "cards": {
-      "completed": { "title": "Workout completed" },
-      "streak": { "title": "{{days}} day streak", "meta": "Consistency" },
-      "record": { "title": "New personal best", "meta": "Bench press · {{weight}} kg" }
-    }
-  },
-  "download": {
-    "headline": "Start today.",
-    "statement": "FIT.ME — everything for your progress.",
-    "cta": "Download FitMe",
-    "appStore": "App Store",
-    "googlePlay": "Google Play"
-  },
-  "features": {
-    "title": "Powerful Features for Your Fitness Journey",
-    "trainers": {
-      "title": "Certified Personal Trainers",
-      "description": "Connect with expert trainers who guide your fitness journey"
-    },
-    "tracking": {
-      "title": "Progress Tracking",
-      "description": "Monitor your improvements with detailed analytics and insights"
-    },
-    "measurements": {
-      "title": "Body Measurements",
-      "description": "Track your body composition changes over time"
-    },
-    "library": {
-      "title": "Exercise Library",
-      "description": "Access comprehensive video guides for perfect form"
-    },
-    "nutrition": {
-      "title": "Nutrition Plans",
-      "description": "Customized meal plans to support your fitness goals"
-    },
-    "workouts": {
-      "title": "Workout Programs",
-      "description": "Tailored workout routines for your specific goals"
-    }
-  },
-  "subscription": {
-    "title": "FIT.ME Premium Subscription",
-    "subtitle": "Get access to all features and start your journey to your dream body",
-    "featuresTitle": "What's included",
-    "plansTitle": "Plans",
-    "perMonth": "per month",
-    "popular": "Popular",
-    "buyButton": "Get subscription",
-    "termsPrefix": "By subscribing, you agree to the",
-    "termsLink": "subscription payment agreement",
-    "paymeNote": "Payments are processed via Payme in UZS",
-    "noPlans": "Plans are temporarily unavailable",
-    "features": {
-      "workoutDiary": "Workout diary",
-      "workoutPrograms": "Workout programs",
-      "nutritionPlans": "Nutrition plans",
-      "foodScanner": "Food scanner",
-      "trainerInteraction": "Trainer interaction",
-      "customPrograms": "Create your own workout programs",
-      "trainingVideos": "Watch training videos"
-    }
-  },
-  "roles": {
-    "title": "For Everyone in Fitness",
-    "beginners": {
-      "title": "Beginners",
-      "description": "Start your fitness journey with guided workouts and expert support"
-    },
-    "advanced": {
-      "title": "Advanced Athletes",
-      "description": "Take your training to the next level with advanced tracking and programs"
-    },
-    "trainers": {
-      "title": "Personal Trainers",
-      "description": "Grow your business and manage clients efficiently"
-    }
-  },
-  "cta": {
-    "title": "Start Your Fitness Journey Today",
-    "subtitle": "Join thousands of users who have transformed their lives with FitMe",
-    "comingSoon": "Coming Soon",
-    "becomeTrainer": "Become a Trainer"
-  },
-  "footer": {
-    "rights": "© 2025 FitMe. All rights reserved."
-  }
+	"nav": {
+		"features": "Features",
+		"subscription": "Subscription",
+		"forEveryone": "For Everyone",
+		"download": "Coming Soon",
+		"training": "Training",
+		"progress": "Progress",
+		"nutrition": "Nutrition",
+		"diary": "Diary",
+		"downloadApp": "Download the app",
+		"menu": "Menu",
+		"close": "Close",
+		"account": "Account",
+		"login": "Sign in"
+	},
+	"hero": {
+		"line1": "Your body.",
+		"line2": "Your plan.",
+		"line3": "Your",
+		"line3Accent": "progress.",
+		"lead": "Everything you need for training, progress and healthy habits — in a single app.",
+		"cta": "Download FitMe",
+		"stores": "App Store · Google Play",
+		"cards": {
+			"workouts": { "value": "12", "label": "workouts" },
+			"strength": { "value": "+18%", "label": "strength" },
+			"consistency": { "value": "86%", "label": "consistency" }
+		}
+	},
+	"training": {
+		"headline": "Training",
+		"statement": "Train by a ready-made plan or build your own."
+	},
+	"progress": {
+		"headline": "See yourself change.",
+		"statement": "Every workout adds up — and you see the result in numbers.",
+		"stats": {
+			"workouts": "workouts",
+			"strength": "strength",
+			"consistency": "consistency"
+		},
+		"panel": {
+			"exercise": "Bench press",
+			"range": "6 months",
+			"month": "March",
+			"weight": "weight",
+			"chest": "chest",
+			"waist": "waist",
+			"streak": "12 day streak"
+		}
+	},
+	"nutrition": {
+		"headline": "Keep nutrition under control.",
+		"statement": "Track what you eat and understand what actually works for you.",
+		"panel": {
+			"today": "Today",
+			"goal": "goal",
+			"kcal": "kcal",
+			"protein": "Protein",
+			"carbs": "Carbs",
+			"fats": "Fats",
+			"breakfast": "Breakfast",
+			"lunch": "Lunch",
+			"dinner": "Dinner"
+		}
+	},
+	"diary": {
+		"headline": "Your journey, all in one place.",
+		"statement": "Every workout is saved — and adds up to a story you write yourself.",
+		"today": "Today",
+		"month": "Mar",
+		"meta": "{{minutes}} min · {{exercises}} exercises",
+		"more": "{{entries}} more entries",
+		"entries": {
+			"legs": "Legs & core",
+			"push": "Chest & triceps",
+			"pull": "Back & biceps",
+			"cardio": "Cardio"
+		},
+		"cards": {
+			"completed": { "title": "Workout completed" },
+			"streak": { "title": "{{days}} day streak", "meta": "Consistency" },
+			"record": { "title": "New personal best", "meta": "Bench press · {{weight}} kg" }
+		}
+	},
+	"results": {
+		"headline": "Results of users",
+		"before": "Before",
+		"after": "After"
+	},
+	"download": {
+		"headline": "Start today.",
+		"statement": "FIT.ME — everything for your progress.",
+		"cta": "Download FitMe",
+		"appStore": "App Store",
+		"googlePlay": "Google Play"
+	},
+	"features": {
+		"title": "Powerful Features for Your Fitness Journey",
+		"trainers": {
+			"title": "Certified Personal Trainers",
+			"description": "Connect with expert trainers who guide your fitness journey"
+		},
+		"tracking": {
+			"title": "Progress Tracking",
+			"description": "Monitor your improvements with detailed analytics and insights"
+		},
+		"measurements": {
+			"title": "Body Measurements",
+			"description": "Track your body composition changes over time"
+		},
+		"library": {
+			"title": "Exercise Library",
+			"description": "Access comprehensive video guides for perfect form"
+		},
+		"nutrition": {
+			"title": "Nutrition Plans",
+			"description": "Customized meal plans to support your fitness goals"
+		},
+		"workouts": {
+			"title": "Workout Programs",
+			"description": "Tailored workout routines for your specific goals"
+		}
+	},
+	"subscription": {
+		"title": "FIT.ME Premium Subscription",
+		"subtitle": "Get access to all features and start your journey to your dream body",
+		"featuresTitle": "What's included",
+		"plansTitle": "Plans",
+		"perMonth": "per month",
+		"popular": "Popular",
+		"buyButton": "Get subscription",
+		"termsPrefix": "By subscribing, you agree to the",
+		"termsLink": "subscription payment agreement",
+		"paymeNote": "Payments are processed via Payme in UZS",
+		"noPlans": "Plans are temporarily unavailable",
+		"features": {
+			"workoutDiary": "Workout diary",
+			"workoutPrograms": "Workout programs",
+			"nutritionPlans": "Nutrition plans",
+			"foodScanner": "Food scanner",
+			"trainerInteraction": "Trainer interaction",
+			"customPrograms": "Create your own workout programs",
+			"trainingVideos": "Watch training videos"
+		}
+	},
+	"roles": {
+		"title": "For Everyone in Fitness",
+		"beginners": {
+			"title": "Beginners",
+			"description": "Start your fitness journey with guided workouts and expert support"
+		},
+		"advanced": {
+			"title": "Advanced Athletes",
+			"description": "Take your training to the next level with advanced tracking and programs"
+		},
+		"trainers": {
+			"title": "Personal Trainers",
+			"description": "Grow your business and manage clients efficiently"
+		}
+	},
+	"cta": {
+		"title": "Start Your Fitness Journey Today",
+		"subtitle": "Join thousands of users who have transformed their lives with FitMe",
+		"comingSoon": "Coming Soon",
+		"becomeTrainer": "Become a Trainer"
+	},
+	"footer": {
+		"rights": "© 2025 FitMe. All rights reserved."
+	}
 }
