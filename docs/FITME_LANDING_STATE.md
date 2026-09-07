@@ -11,13 +11,25 @@ The user supplies one section spec at a time and reviews it before the next one.
 clean for all landing code; one pre-existing unrelated error remains (unused `CalendarCheck` import in
 `src/components/profile/ActiveSubscriptionCard.tsx` — do not fix unless asked).
 
-**The landing has only been verified visually on a wide desktop viewport (1440×900), and only the hero.**
-Headless screenshots are close to useless on this page and cost minutes per attempt: the idle float
-animations use `repeat: Infinity`, which starves Chrome's `--virtual-time-budget`, so `whileInView`
-reveals stay at `opacity: 0` and successive captures of the same build disagree with each other about
-geometry. Two real layout bugs were still found that way (see §11.8 and the `picture` note in §7), but
-**trust `npm run dev` and a real phone over any headless capture** — everything below `lg`, and every
-section under the hero, still needs a human eye.
+**Verified visually: the hero only, at 1440×900 and at 500×1000.** Everything below the hero still needs
+a human eye, and so does a real phone.
+
+If you screenshot this page with headless Chrome, three things will waste your afternoon unless you know
+them:
+1. **A window narrower than ~500px is silently clamped.** Chrome lays the page out at ~516px and the
+   capture shows only the left 390px of it, so every "phone" screenshot looks like the layout overflows
+   and is cut on the right. It is an artifact — `index.html` has a correct
+   `width=device-width, initial-scale=1` and real phones are fine. Capture at **500×1000**: still the
+   mobile breakpoint (<640px), no clamping, phone-like proportions.
+2. **Pass `--force-prefers-reduced-motion`.** The idle floats use `repeat: Infinity`, which starves
+   `--virtual-time-budget`; without it the capture times out and `whileInView` reveals stay at
+   `opacity: 0`, so the store buttons appear to be missing.
+3. **Start the preview server and take the shot in the same shell command.** A backgrounded server does
+   not survive into the next command, and the capture silently becomes a screenshot of
+   `ERR_CONNECTION_REFUSED`.
+
+Two real layout bugs were found this way regardless (see §11.8 and the sizing note in §7), so the tool is
+worth using — just verify the capture is of the actual page before reading anything into it.
 
 ## 1. Stack
 
@@ -146,21 +158,35 @@ an account link instead; the header is always compact there.
 `sections/Hero.tsx`. No `id`. Rebuilt in Sept 2026 around the client's direction (§1a): the athletes and
 the two stores, nothing else. **The phone mockup, the lead paragraph and the floating stat cards were
 removed from this section on purpose — do not put them back.**
-Layout: `min-h-[100svh]` flex column, centred. Three-line headline "Твоё тело. / Твой план. /
-Твой прогресс." (**прогресс** in red) sits at the top, `StoreButtons` at the bottom, and
-the shot fills the space between them, bottom-anchored.
-The photo is sized by its **box**, not by the image: `<picture>` carries
-`h-[46svh] sm:h-[58svh] xl:h-[64svh] w-full` and the `<img>` inside is
-`h-full w-full object-contain object-bottom`. That is deliberate — a narrow or short window then scales
-the athletes down instead of slicing an arm off the frame, which matters because the bodies *are* the
-message. `picture` has to carry the box: as a bare child it shrinks to the image's intrinsic width and
-the sizing silently breaks (this was a real bug, twice).
+Layout: `min-h-[88svh] sm:min-h-[100svh]` flex column, centred. Three-line headline "Твоё тело. /
+Твой план. / Твой прогресс." (**прогресс** in red), `StoreButtons` pinned to the bottom, and the shot
+between them, bottom-anchored. The current photo is the couple with the red hat (Sept 2026, second
+version — the first one was a different pair on a black background).
+
+**Sizing — the part that keeps breaking.** The photo is sized by its **box**, never by the image:
+`<picture>` carries `w-full sm:h-[58svh] xl:h-[64svh]` and the `<img>` is
+`w-full sm:h-full sm:object-contain sm:object-bottom`. So phones fit it to the screen width, and from
+`sm` up the box owns the height and `object-contain` fits the shot inside it. A narrow or short window
+then scales the athletes down instead of slicing an arm off the frame, which matters because the bodies
+*are* the message. Two rules follow:
+- `picture` **must** carry the sizing. As a bare child it shrinks to the image's intrinsic width and the
+  whole layout silently drifts wider than the screen (this shipped twice before being caught).
+- Both `<source>`s must stay cropped to the **same 1011:941 box** (see §11.8), because the phone
+  headline is positioned from that ratio.
+
+**Where the headline sits.** On phones it is absolutely positioned, hanging off the top edge of the shot:
+`absolute inset-x-5 bottom-[calc(93vw_+_0.75rem)]`, where `93vw = 100 / 1.074` is exactly the shot's
+height at full screen width. The dark space therefore gathers *above* the words instead of splitting them
+from the athletes — the user rejected the top-pinned version for exactly that reason. From `sm` up it
+returns to `static` at the top of the frame. **If the crop ratio changes, this number must change with
+it.** Mobile scale `clamp(2.25rem,11vw,4rem)` is the largest that still keeps "Твой прогресс." on one
+line at 320px; `sm:clamp(2.1rem,5vw,3.4rem)`, `lg:clamp(2.5rem,3.6vw,4rem)`.
+
 A `bg-gradient-to-t from-ink via-ink/80` scrim over the bottom `34svh` seats the athletes in the darkness
-and carries the buttons. One `bg-accent/[0.13]` glow behind them.
-The headline runs a smaller scale than the closing frame (`clamp(2.1rem,7.5vw,3.4rem)` /
-`lg:clamp(2.5rem,3.6vw,4rem)`) so the photo stays dominant; the clearance between the last headline line
-and the top of the photo is deliberate and tight, so **do not enlarge either of them without checking a
-short desktop window (~600px tall)**.
+and carries the buttons. One `bg-accent/[0.13]` glow behind them. Because that scrim is opaque it hides
+the section's own film grain, so the boundary with the next section is ~1.4% brighter than the strip
+above it — measurable, effectively invisible on a phone, and the reason the hero stops at `88svh` there:
+less dead air above the headline, and the next block peeking invites the scroll to the proof.
 Load sequence: glow fades over 2s, the shot fades and scales `1.05 → 1` over 2.4s (a slow push-in),
 headline lines unmask at 0.15/0.27/0.39, buttons last at 0.9.
 
@@ -319,17 +345,23 @@ separately, not scaled.
    in the hero) and `ui/StoreLink` (a quiet glyph-plus-name link, used in the closing frame). Both read
    from `constants/stores.ts`, which holds the links and the two brand glyph paths. Official store badge
    artwork does not exist in the repo and must not be faked.
-8. The hero shot (`public/images/hero.png`, 1536×1024) is **cut out on a real alpha channel**, so it needs
-   no mask or frame — it sits straight on `bg-ink`. Served as WebP through `<picture>`, with the 1.7MB PNG
-   only as a fallback for browsers without WebP:
-   - `hero.webp` (207KB) everywhere from 640px up;
-   - `hero-mobile.webp` (126KB, 900×820) below 640px — the same shot **cropped tight to the silhouette**
-     (the two figures span x 252…1336 of the 1536px original), so fitting it to a phone's width keeps the
-     bodies as large as possible. Regenerate both with:
+8. The hero shot is **cut out on a real alpha channel**, so it needs no mask or frame — it sits straight
+   on `bg-ink`. `public/images/hero.png` (1671×941, 1.2MB) is the master and is **not referenced at
+   runtime**; only these two WebPs are served, both cropped to the same box so their aspect ratio matches:
+   - `hero.webp` (138KB, 1011×941) from 640px up;
+   - `hero-mobile.webp` (90KB, 900×838) below 640px.
+
+   The crop removes the transparent air around the couple, who occupy only x 320…1275 of the master (28px
+   of air is kept on each side). That air is worth removing: it made the athletes ~40% smaller at every
+   breakpoint for no visual gain. There is deliberately **no PNG fallback** — WebP-with-alpha is
+   universal since 2020, and a fallback with a different aspect ratio would break the phone headline's
+   `93vw` anchor. Regenerate both with:
    ```
-   cwebp -q 80 -alpha_q 90 -m 6 hero.png -o hero.webp
-   cwebp -q 74 -alpha_q 88 -m 6 -crop 232 0 1124 1024 -resize 900 0 hero.png -o hero-mobile.webp
+   cwebp -q 80 -alpha_q 90 -m 6 -crop 292 0 1011 941 hero.png -o hero.webp
+   cwebp -q 74 -alpha_q 88 -m 6 -crop 292 0 1011 941 -resize 900 0 hero.png -o hero-mobile.webp
    ```
+   After a new photo: re-measure the alpha bounding box, redo the crop, and update the `<img>`
+   `width`/`height`, the crop numbers here, and the `93vw` in `Hero.tsx` (`100 / new aspect`).
 9. Language switcher stays in the header; the account link lives only in the mobile overlay and on
    interior routes.
 

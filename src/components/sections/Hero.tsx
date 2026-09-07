@@ -16,7 +16,7 @@ export default function Hero() {
 	const shouldReduceMotion = useReducedMotion()
 
 	return (
-		<section className='grain relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-ink'>
+		<section className='grain relative isolate flex min-h-[88svh] flex-col overflow-hidden bg-ink sm:min-h-[100svh]'>
 			{/* Single red light source, behind the athletes */}
 			<motion.div
 				initial={{ opacity: 0 }}
@@ -33,31 +33,28 @@ export default function Hero() {
 				initial={{ opacity: 0, scale: shouldReduceMotion ? 1 : 1.05 }}
 				animate={{ opacity: 1, scale: 1 }}
 				transition={{ duration: 2.4, ease: EASE_PREMIUM }}
-				className='pointer-events-none absolute inset-x-0 bottom-0'
+				className='pointer-events-none absolute inset-x-0 bottom-5'
 			>
-				{/* The box owns the size and `object-contain` fits the shot inside it,
-				    so a narrow window makes the athletes smaller instead of cutting an
-				    arm off. `picture` must carry the box: as a bare flex/inline child it
-				    would shrink to the image's intrinsic width instead. */}
-				<picture className='block h-[46svh] w-full sm:h-[58svh] xl:h-[64svh]'>
-					{/* Phones get the shot cropped tight to the silhouette, so fitting it
-					    to the screen width leaves the bodies as large as possible. */}
+				{/* Both sources are cropped to the same 1011:941 box, so on phones the
+				    shot's height is always `100 / 1.074 = 93vw` — the figure the headline
+				    below is anchored to. From `sm` up the box owns the size instead and
+				    `object-contain` fits the shot inside it, so a narrow or short window
+				    scales the athletes down rather than cutting an arm off the frame.
+				    `picture` has to carry the sizing: as a bare child it shrinks to the
+				    image's intrinsic width and this all falls apart. */}
+				<picture className='block w-full sm:h-[58svh] xl:h-[64svh]'>
 					<source
 						media='(max-width: 639px)'
 						srcSet='/images/hero-mobile.webp'
 						type='image/webp'
 					/>
-					<source
-						srcSet='/images/hero.webp'
-						type='image/webp'
-					/>
 					<img
-						src='/images/hero.png'
+						src='/images/hero.webp'
 						alt=''
-						width={1536}
-						height={1024}
+						width={1011}
+						height={941}
 						draggable={false}
-						className='h-full w-full select-none object-contain object-bottom'
+						className='w-full select-none sm:h-full sm:object-contain sm:object-bottom'
 					/>
 				</picture>
 			</motion.div>
@@ -65,8 +62,13 @@ export default function Hero() {
 			{/* Seats them into the darkness and carries the buttons */}
 			<div className='pointer-events-none absolute inset-x-0 bottom-0 h-[34svh] bg-gradient-to-t from-ink via-ink/80 to-transparent' />
 
-			<div className='relative mx-auto flex w-full max-w-edge flex-1 flex-col items-center justify-between px-5 pb-14 pt-28 text-center sm:px-8 sm:pb-16 lg:px-14 lg:pt-32'>
-				<h1 className='text-[clamp(4rem,7.5vw,3.4rem)] font-semibold leading-[0.94] tracking-tightest lg:text-[clamp(2.5rem,3.6vw,4rem)]'>
+			<div className='relative mx-auto flex w-full max-w-edge flex-1 flex-col items-center justify-end px-5 pb-14 text-center sm:justify-between sm:px-8 sm:pb-16 sm:pt-28 lg:px-14 lg:pt-32'>
+				{/* On phones the headline hangs off the top edge of the shot, so the dark
+				    space gathers above the words instead of splitting them from the
+				    athletes. From `sm` up it goes back to the top of the frame.
+				    The mobile scale is the largest that still keeps "Твой прогресс." on
+				    one line at 320px — raising it wraps the line. */}
+				<h1 className='absolute inset-x-5 bottom-[calc(93vw_+_5rem)] text-[clamp(2.25rem,11vw,4rem)] font-semibold leading-[0.94] tracking-tightest sm:static sm:inset-x-auto sm:bottom-auto sm:text-[clamp(2.1rem,5vw,3.4rem)] lg:text-[clamp(2.5rem,3.6vw,4rem)]'>
 					<RevealLine delay={0.15}>{t('hero.line1')}</RevealLine>
 					<RevealLine delay={0.27}>{t('hero.line2')}</RevealLine>
 					<RevealLine delay={0.39}>
