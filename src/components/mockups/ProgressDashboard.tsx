@@ -39,7 +39,7 @@ export default function ProgressDashboard({ className }: Props) {
 					<p className='text-[9px] uppercase tracking-[0.2em] text-muted'>
 						{t('progress.panel.exercise')}
 					</p>
-					<p className='mt-1.5 text-[22px] font-semibold leading-none tracking-tight'>80 кг</p>
+					<p className='mt-1.5 text-[22px] font-semibold leading-none'>80 кг</p>
 				</div>
 				<p className='text-[10px] uppercase tracking-[0.16em] text-muted'>
 					{t('progress.panel.range')}
@@ -97,7 +97,7 @@ export default function ProgressDashboard({ className }: Props) {
 				<div className='flex gap-5'>
 					{MEASUREMENTS.map(item => (
 						<div key={item.key}>
-							<p className='text-[13px] font-semibold tracking-tight'>{item.value}</p>
+							<p className='text-[13px] font-semibold'>{item.value}</p>
 							<p className='text-[9px] uppercase tracking-[0.14em] text-muted'>
 								{t(`progress.panel.${item.key}`)}
 							</p>

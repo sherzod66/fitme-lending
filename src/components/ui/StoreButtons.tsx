@@ -21,7 +21,9 @@ export default function StoreButtons({ className }: Props) {
 	const order: StorePlatform[] = platform === 'ios' ? ['ios', 'android'] : ['android', 'ios']
 
 	return (
-		<div className={clsx('flex flex-col gap-3 sm:flex-row sm:justify-center', className)}>
+		<div
+			className={clsx('flex flex-col gap-3 sm:flex-row sm:justify-center font-premium', className)}
+		>
 			{order.map((key, index) => {
 				const store = STORES[key]
 

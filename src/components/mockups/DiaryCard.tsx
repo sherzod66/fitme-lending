@@ -59,9 +59,7 @@ export default function DiaryCard({
 				</span>
 
 				<span className='min-w-0'>
-					<span className='block truncate text-[12px] font-medium leading-tight tracking-tight'>
-						{title}
-					</span>
+					<span className='block truncate text-[12px] font-medium leading-tight'>{title}</span>
 					{meta && (
 						<span className='mt-1 block truncate text-[10px] uppercase tracking-[0.14em] text-muted'>
 							{meta}

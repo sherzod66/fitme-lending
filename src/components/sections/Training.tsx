@@ -1,6 +1,7 @@
 import clsx from 'clsx'
 import { useTranslation } from 'react-i18next'
 
+import { images } from '../../assets/images'
 import ColumnRules from '../ui/ColumnRules'
 import PhoneShot from '../ui/PhoneShot'
 import Reveal from '../ui/motion/Reveal'
@@ -10,9 +11,10 @@ import SectionIntro from './SectionIntro'
 type ShowcasePhoneProps = {
 	delay: number
 	className?: string
+	src?: string
 }
 
-function ShowcasePhone({ delay, className }: ShowcasePhoneProps) {
+function ShowcasePhone({ delay, className, src }: ShowcasePhoneProps) {
 	return (
 		<div className={clsx('relative w-[min(80vw,330px)] sm:w-[340px]', className)}>
 			<Reveal
@@ -21,14 +23,17 @@ function ShowcasePhone({ delay, className }: ShowcasePhoneProps) {
 				duration={1.2}
 				amount={0.15}
 			>
-				<PhoneShot className='w-full' />
+				<PhoneShot
+					className='w-full'
+					src={src}
+				/>
 			</Reveal>
 		</div>
 	)
 }
 
 export default function Training() {
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 
 	return (
 		<section
@@ -53,16 +58,19 @@ export default function Training() {
 						<ShowcasePhone
 							delay={0}
 							className='lg:w-[262px] lg:translate-y-16 xl:w-[290px]'
+							src={images['1'][i18n.language as 'ru'].src}
 						/>
 
 						<ShowcasePhone
 							delay={0.16}
 							className='z-10 lg:w-[300px] lg:-translate-y-8 xl:w-[340px]'
+							src={images['2'][i18n.language as 'ru'].src}
 						/>
 
 						<ShowcasePhone
 							delay={0.32}
 							className='lg:w-[262px] lg:translate-y-6 xl:w-[290px]'
+							src={images['3'][i18n.language as 'ru'].src}
 						/>
 					</div>
 				</div>

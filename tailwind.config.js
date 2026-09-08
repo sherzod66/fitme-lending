@@ -17,14 +17,9 @@ export default {
 				muted: '#A1A1A1'
 			},
 			fontFamily: {
-				sans: [
-					'"Inter var"',
-					'Inter',
-					'-apple-system',
-					'BlinkMacSystemFont',
-					'"Segoe UI"',
-					'sans-serif'
-				]
+				premium: ['var(--font-premium)'],
+				secondary: ['var(--font-secondary)'],
+				sans: ['var(--font-secondary)']
 			},
 			letterSpacing: {
 				tightest: '-0.05em'

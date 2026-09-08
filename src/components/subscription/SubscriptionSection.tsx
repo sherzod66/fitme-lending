@@ -61,9 +61,7 @@ function Plan({ plan, language, delay }: PlanProps) {
 
 				<div className='flex items-end justify-between gap-5'>
 					<div className='min-w-0'>
-						<p className='truncate text-[13px] font-medium tracking-tight'>
-							{getPlanLabel(plan, language)}
-						</p>
+						<p className='truncate text-[13px] font-medium'>{getPlanLabel(plan, language)}</p>
 
 						<div className='mt-2.5 flex flex-wrap items-baseline gap-2.5'>
 							{plan.oldPrice > 0 && (
@@ -71,7 +69,7 @@ function Plan({ plan, language, delay }: PlanProps) {
 									{formatSum(plan.oldPrice)}
 								</span>
 							)}
-							<span className='text-[26px] font-semibold leading-none tracking-tightest text-accent'>
+							<span className='text-[26px] font-semibold leading-none text-accent'>
 								{formatSum(plan.price)}
 							</span>
 						</div>
@@ -81,9 +79,7 @@ function Plan({ plan, language, delay }: PlanProps) {
 						<p className='text-[9px] uppercase tracking-[0.16em] text-muted'>
 							{t('subscription.perMonth')}
 						</p>
-						<p className='mt-1.5 text-[14px] font-semibold tracking-tight'>
-							{formatSum(Math.round(perMonth))}
-						</p>
+						<p className='mt-1.5 text-[14px] font-semibold'>{formatSum(Math.round(perMonth))}</p>
 					</div>
 				</div>
 			</div>

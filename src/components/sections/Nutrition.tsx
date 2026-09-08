@@ -4,6 +4,7 @@ import type { MotionValue } from 'framer-motion'
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 
+import { images } from '../../assets/images'
 import NutritionPanel from '../mockups/NutritionPanel'
 import ColumnRules from '../ui/ColumnRules'
 import PhoneShot from '../ui/PhoneShot'
@@ -40,7 +41,7 @@ function Food({ src, y, className, imageClassName }: FoodProps) {
 export default function Nutrition() {
 	const sectionRef = useRef<HTMLElement>(null)
 	const shouldReduceMotion = useReducedMotion()
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 
 	const { scrollYProgress } = useScroll({
 		target: sectionRef,
@@ -112,7 +113,10 @@ export default function Nutrition() {
 							transition={{ duration: 1.4, ease: EASE_PREMIUM }}
 							className='relative mx-auto w-[min(78vw,320px)] sm:w-[340px] lg:mx-0 lg:ml-auto lg:w-[340px] xl:w-[380px]'
 						>
-							<PhoneShot className='w-full' />
+							<PhoneShot
+								className='w-full'
+								src={images['5'][i18n.language as 'ru'].src}
+							/>
 
 							<NutritionPanel className='hidden lg:absolute lg:bottom-6 lg:-left-[190px] lg:z-20 lg:block lg:w-[300px] xl:-left-[210px] xl:w-[320px]' />
 						</motion.div>

@@ -3,6 +3,7 @@ import { Check, Flame, TrendingUp } from 'lucide-react'
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 
+import { images } from '../../assets/images'
 import DiaryCard from '../mockups/DiaryCard'
 import DiaryTimeline from '../mockups/DiaryTimeline'
 import ColumnRules from '../ui/ColumnRules'
@@ -21,7 +22,7 @@ const CARD_POSITIONS = [
 export default function Diary() {
 	const sectionRef = useRef<HTMLElement>(null)
 	const shouldReduceMotion = useReducedMotion()
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 
 	const { scrollYProgress } = useScroll({
 		target: sectionRef,
@@ -37,12 +38,12 @@ export default function Diary() {
 			title: t('diary.cards.completed.title'),
 			meta: t('diary.meta', { minutes: 58, exercises: 12 })
 		},
-		{
-			key: 'streak',
-			icon: Flame,
-			title: t('diary.cards.streak.title', { days: 14 }),
-			meta: t('diary.cards.streak.meta')
-		},
+		// {
+		// 	key: 'streak',
+		// 	icon: Flame,
+		// 	title: t('diary.cards.streak.title', { days: 14 }),
+		// 	meta: t('diary.cards.streak.meta')
+		// },
 		{
 			key: 'record',
 			icon: TrendingUp,
@@ -84,7 +85,10 @@ export default function Diary() {
 								viewport={{ once: true, amount: 0.2 }}
 								transition={{ duration: 1.6, ease: EASE_PREMIUM }}
 							>
-								<PhoneShot className='w-full' />
+								<PhoneShot
+									className='w-full'
+									src={images['6'][i18n.language as 'ru'].src}
+								/>
 							</motion.div>
 
 							{cards.map((card, index) => (

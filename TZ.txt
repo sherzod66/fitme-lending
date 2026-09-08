@@ -6,7 +6,7 @@ The primary goal of this website is NOT to explain every feature.
 
 The primary goal is:
 
-**Make the visitor want to download the FitMe app.**
+**Make the visitor want to download the FIT.ME app.**
 
 The website should feel like a premium consumer product, not a generic SaaS landing page.
 

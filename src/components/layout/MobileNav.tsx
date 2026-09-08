@@ -67,7 +67,7 @@ export default function MobileNav({
 						className='relative flex shrink-0 items-center justify-between px-5 sm:px-8'
 					>
 						<img
-							src='/FitMe.png'
+							src='/FIT.ME.png'
 							alt='FIT.ME'
 							className='h-6 w-auto object-contain'
 						/>
@@ -101,10 +101,8 @@ export default function MobileNav({
 									</span>
 									<span
 										className={clsx(
-											'text-[clamp(1.9rem,9vw,2.75rem)] font-semibold uppercase leading-none tracking-tightest transition-colors duration-500',
-											activeId === section.id
-												? 'text-accent'
-												: 'text-white group-hover:text-accent'
+											'text-[clamp(1.9rem,9vw,2.75rem)] font-semibold uppercase leading-none transition-colors duration-500',
+											activeId === section.id ? 'text-accent' : 'text-white group-hover:text-accent'
 										)}
 									>
 										{t(section.labelKey)}

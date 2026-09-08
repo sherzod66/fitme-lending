@@ -10,12 +10,18 @@ type Props = {
 	className?: string
 	alt?: string
 	loading?: 'eager' | 'lazy'
+	src?: string
 }
 
-export default function PhoneShot({ className, alt = 'FIT.ME', loading = 'lazy' }: Props) {
+export default function PhoneShot({
+	className,
+	alt = 'FIT.ME',
+	loading = 'lazy',
+	src = SRC
+}: Props) {
 	return (
 		<img
-			src={SRC}
+			src={src}
 			alt={alt}
 			width={NATURAL_WIDTH}
 			height={NATURAL_HEIGHT}

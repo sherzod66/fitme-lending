@@ -15,12 +15,12 @@
 		"login": "Sign in"
 	},
 	"hero": {
-		"line1": "Your body.",
-		"line2": "Your plan.",
-		"line3": "Your",
-		"line3Accent": "progress.",
+		"line1": "Your best shape is closer than you think",
+		"line2": "Training and nutrition — in one place",
+		"line3": "Download the app and start to",
+		"line3Accent": "evolve",
 		"lead": "Everything you need for training, progress and healthy habits — in a single app.",
-		"cta": "Download FitMe",
+		"cta": "Download FIT.ME",
 		"stores": "App Store · Google Play",
 		"cards": {
 			"workouts": { "value": "12", "label": "workouts" },
@@ -33,7 +33,7 @@
 		"statement": "Train by a ready-made plan or build your own."
 	},
 	"progress": {
-		"headline": "See yourself change.",
+		"headline": "Progress you can see",
 		"statement": "Every workout adds up — and you see the result in numbers.",
 		"stats": {
 			"workouts": "workouts",
@@ -51,7 +51,7 @@
 		}
 	},
 	"nutrition": {
-		"headline": "Keep nutrition under control.",
+		"headline": "Nutrition under control",
 		"statement": "Track what you eat and understand what actually works for you.",
 		"panel": {
 			"today": "Today",
@@ -66,7 +66,7 @@
 		}
 	},
 	"diary": {
-		"headline": "Your journey, all in one place.",
+		"headline": "Your workout history",
 		"statement": "Every workout is saved — and adds up to a story you write yourself.",
 		"today": "Today",
 		"month": "Mar",
@@ -79,55 +79,55 @@
 			"cardio": "Cardio"
 		},
 		"cards": {
-			"completed": { "title": "Workout completed" },
+			"completed": { "title": "Workout done" },
 			"streak": { "title": "{{days}} day streak", "meta": "Consistency" },
 			"record": { "title": "New personal best", "meta": "Bench press · {{weight}} kg" }
 		}
 	},
 	"results": {
-		"headline": "Results of users",
+		"headline": "Real results",
 		"before": "Before",
 		"after": "After"
 	},
 	"download": {
-		"headline": "Start today.",
+		"headline": "Start now",
 		"statement": "FIT.ME — everything for your progress.",
-		"cta": "Download FitMe",
+		"cta": "Download FIT.ME",
 		"appStore": "App Store",
 		"googlePlay": "Google Play"
 	},
 	"features": {
-		"title": "Powerful Features for Your Fitness Journey",
+		"title": "Built for real progress",
 		"trainers": {
-			"title": "Certified Personal Trainers",
+			"title": "Certified trainers",
 			"description": "Connect with expert trainers who guide your fitness journey"
 		},
 		"tracking": {
-			"title": "Progress Tracking",
+			"title": "Progress tracking",
 			"description": "Monitor your improvements with detailed analytics and insights"
 		},
 		"measurements": {
-			"title": "Body Measurements",
+			"title": "Body measurements",
 			"description": "Track your body composition changes over time"
 		},
 		"library": {
-			"title": "Exercise Library",
+			"title": "Exercise library",
 			"description": "Access comprehensive video guides for perfect form"
 		},
 		"nutrition": {
-			"title": "Nutrition Plans",
+			"title": "Nutrition plans",
 			"description": "Customized meal plans to support your fitness goals"
 		},
 		"workouts": {
-			"title": "Workout Programs",
+			"title": "Workout programs",
 			"description": "Tailored workout routines for your specific goals"
 		}
 	},
 	"subscription": {
-		"title": "FIT.ME Premium Subscription",
+		"title": "Full access to FIT.ME",
 		"subtitle": "Get access to all features and start your journey to your dream body",
-		"featuresTitle": "What's included",
-		"plansTitle": "Plans",
+		"featuresTitle": "What's inside",
+		"plansTitle": "Choose a plan",
 		"perMonth": "per month",
 		"popular": "Popular",
 		"buyButton": "Get subscription",
@@ -146,27 +146,27 @@
 		}
 	},
 	"roles": {
-		"title": "For Everyone in Fitness",
+		"title": "Made for every athlete",
 		"beginners": {
 			"title": "Beginners",
 			"description": "Start your fitness journey with guided workouts and expert support"
 		},
 		"advanced": {
-			"title": "Advanced Athletes",
+			"title": "Experienced athletes",
 			"description": "Take your training to the next level with advanced tracking and programs"
 		},
 		"trainers": {
-			"title": "Personal Trainers",
+			"title": "Personal trainers",
 			"description": "Grow your business and manage clients efficiently"
 		}
 	},
 	"cta": {
-		"title": "Start Your Fitness Journey Today",
-		"subtitle": "Join thousands of users who have transformed their lives with FitMe",
+		"title": "Ready to start?",
+		"subtitle": "Join thousands of users who have transformed their lives with FIT.ME",
 		"comingSoon": "Coming Soon",
 		"becomeTrainer": "Become a Trainer"
 	},
 	"footer": {
-		"rights": "© 2025 FitMe. All rights reserved."
+		"rights": "© 2025 FIT.ME. All rights reserved."
 	}
 }

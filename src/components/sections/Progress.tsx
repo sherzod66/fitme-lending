@@ -2,6 +2,7 @@ import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 
+import { images } from '../../assets/images'
 import ProgressDashboard from '../mockups/ProgressDashboard'
 import ColumnRules from '../ui/ColumnRules'
 import CountUp from '../ui/CountUp'
@@ -20,7 +21,7 @@ const STAT_POSITIONS = [
 export default function Progress() {
 	const sectionRef = useRef<HTMLElement>(null)
 	const shouldReduceMotion = useReducedMotion()
-	const { t } = useTranslation()
+	const { t, i18n } = useTranslation()
 
 	const { scrollYProgress } = useScroll({
 		target: sectionRef,
@@ -89,9 +90,12 @@ export default function Progress() {
 							style={{ y: shouldReduceMotion ? 0 : phoneLift }}
 							className='relative mx-auto w-[min(80vw,320px)] sm:w-[340px] lg:mx-0 lg:w-[350px] xl:w-[380px]'
 						>
-							<PhoneShot className='w-full' />
+							<PhoneShot
+								className='w-full'
+								src={images['4'][i18n.language as 'ru'].src}
+							/>
 
-							{stats.map((stat, index) => (
+							{/* {stats.map((stat, index) => (
 								<FloatingStat
 									key={stat.key}
 									value={stat.value}
@@ -103,7 +107,7 @@ export default function Progress() {
 								/>
 							))}
 
-							<ProgressDashboard className='hidden lg:absolute lg:bottom-4 lg:-right-[180px] lg:z-20 lg:block lg:w-[300px] xl:-right-[200px] xl:w-[330px]' />
+							<ProgressDashboard className='hidden lg:absolute lg:bottom-4 lg:-right-[180px] lg:z-20 lg:block lg:w-[300px] xl:-right-[200px] xl:w-[330px]' /> */}
 						</motion.div>
 
 						{/* Mobile gets the full column width instead of the device width */}

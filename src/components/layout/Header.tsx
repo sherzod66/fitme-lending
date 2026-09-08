@@ -60,7 +60,7 @@ export default function Header({ accountMode }: Props) {
 				initial={false}
 				animate={{ height }}
 				transition={{ duration: shouldReduceMotion ? 0 : 0.6, ease: EASE_PREMIUM }}
-				className='fixed inset-x-0 top-0 z-50'
+				className='fixed inset-x-0 top-0 z-50 font-premium'
 			>
 				<motion.div
 					initial={false}
@@ -89,9 +89,7 @@ export default function Header({ accountMode }: Props) {
 									onClick={() => scrollToSection(section.id)}
 									className={clsx(
 										'relative text-[12px] uppercase tracking-[0.2em] transition-colors duration-500',
-										activeId === section.id
-											? 'text-accent'
-											: 'text-white/65 hover:text-accent'
+										activeId === section.id ? 'text-accent' : 'text-white/65 hover:text-accent'
 									)}
 								>
 									{t(section.labelKey)}

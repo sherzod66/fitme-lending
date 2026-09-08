@@ -28,7 +28,7 @@ export default function SectionIntro({ index, label, headline, description, clas
 				delay={0.12}
 				y={26}
 			>
-				<h2 className='mt-6 text-[clamp(2.4rem,9vw,5rem)] font-semibold leading-[0.9] tracking-tightest lg:text-[clamp(3rem,5vw,5.25rem)]'>
+				<h2 className='mt-6 text-[clamp(2.4rem,9vw,5rem)] font-premium leading-[0.9] lg:text-[clamp(3rem,5vw,5.25rem)]'>
 					{headline}
 				</h2>
 			</Reveal>

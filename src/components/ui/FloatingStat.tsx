@@ -45,7 +45,7 @@ export default function FloatingStat({
 			>
 				<p
 					className={clsx(
-						'text-[19px] font-semibold leading-none tracking-tight',
+						'text-[19px] font-semibold leading-none',
 						accent ? 'text-accent' : 'text-white'
 					)}
 				>

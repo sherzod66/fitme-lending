@@ -11,7 +11,7 @@ import Reveal from '../ui/motion/Reveal'
  * Portrait shots (3:4) crop best.
  */
 const PAIRS: { key: string; before?: string; after?: string }[] = [
-	{ key: 'one' },
+	{ key: 'one', before: '/images/results/before-1.webp', after: '/images/results/after-1.webp' },
 	{ key: 'two' },
 	{ key: 'three' }
 ]
@@ -65,7 +65,7 @@ export default function Results() {
 
 			<div className='relative mx-auto max-w-edge px-5 sm:px-8 lg:px-14'>
 				<Reveal y={22}>
-					<h2 className='max-w-[18ch] text-[clamp(2rem,7vw,3.2rem)] font-semibold leading-[0.95] tracking-tightest lg:text-[clamp(2.4rem,3.4vw,3.75rem)]'>
+					<h2 className='max-w-[18ch] text-[clamp(2rem,7vw,3.2rem)] leading-[0.95] lg:text-[clamp(2.4rem,3.4vw,3.75rem)] font-premium'>
 						{t('results.headline')}
 					</h2>
 				</Reveal>

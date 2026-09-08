@@ -4,18 +4,18 @@ import { useTranslation } from 'react-i18next'
 
 import { EASE_PREMIUM } from '../ui/motion/easing'
 
-const CALORIES = { eaten: 1480, goal: 2100 }
+const CALORIES = { eaten: 773, goal: 2400 }
 
 const MACROS = [
-	{ key: 'protein', current: 128, goal: 150 },
-	{ key: 'carbs', current: 180, goal: 220 },
-	{ key: 'fats', current: 52, goal: 70 }
+	{ key: 'protein', current: 128, goal: 133 },
+	{ key: 'fats', current: 3, goal: 52 },
+	{ key: 'carbs', current: 130, goal: 350 }
 ]
 
 const MEALS = [
-	{ key: 'breakfast', kcal: 420, state: 'done' },
-	{ key: 'lunch', kcal: 610, state: 'active' },
-	{ key: 'dinner', kcal: 450, state: 'planned' }
+	{ key: 'breakfast', kcal: 773, state: 'done' },
+	{ key: 'lunch', kcal: 0, state: 'active' },
+	{ key: 'dinner', kcal: 0, state: 'planned' }
 ] as const
 
 type BarProps = {
@@ -67,7 +67,7 @@ export default function NutritionPanel({ className }: Props) {
 			</div>
 
 			<div className='mt-3 flex items-baseline gap-1.5'>
-				<span className='text-[26px] font-semibold leading-none tracking-tightest'>
+				<span className='text-[26px] font-semibold leading-none'>
 					{CALORIES.eaten.toLocaleString('ru-RU')}
 				</span>
 				<span className='text-[10px] uppercase tracking-[0.16em] text-muted'>
@@ -89,7 +89,7 @@ export default function NutritionPanel({ className }: Props) {
 							<span className='uppercase tracking-[0.14em] text-muted'>
 								{t(`nutrition.panel.${macro.key}`)}
 							</span>
-							<span className='font-medium tracking-tight'>
+							<span className='font-medium'>
 								<span className='text-white'>{macro.current}</span>
 								<span className='text-muted'> / {macro.goal} г</span>
 							</span>
@@ -133,7 +133,7 @@ export default function NutritionPanel({ className }: Props) {
 						</span>
 						<span
 							className={clsx(
-								'text-[11px] font-medium tracking-tight',
+								'text-[11px] font-medium',
 								meal.state === 'planned' ? 'text-muted' : 'text-white'
 							)}
 						>

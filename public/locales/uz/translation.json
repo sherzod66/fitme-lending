@@ -15,12 +15,12 @@
 		"login": "Kirish"
 	},
 	"hero": {
-		"line1": "Tanang.",
-		"line2": "Rejang.",
-		"line3": "",
-		"line3Accent": "Natijang.",
+		"line1": "Chiroyli va sog‘lom tana — bilim va tizim bilan",
+		"line2": "Trening va ovqatlanish — bir joyda",
+		"line3": "Ilovani yuklang va",
+		"line3Accent": "rivojlaning",
 		"lead": "Mashg'ulot, natija va sog'lom odatlar uchun kerakli hamma narsa — bitta ilovada.",
-		"cta": "FitMe'ni yuklab olish",
+		"cta": "FIT.ME'ni yuklab olish",
 		"stores": "App Store · Google Play",
 		"cards": {
 			"workouts": { "value": "12", "label": "mashg'ulot" },
@@ -33,7 +33,7 @@
 		"statement": "Tayyor reja bo'yicha mashq qil yoki o'zingniki yarat."
 	},
 	"progress": {
-		"headline": "O'zgarishingizni ko'ring.",
+		"headline": "Natijangizni ko‘ring.",
 		"statement": "Har bir mashg'ulot natijaga qo'shiladi — va siz uni raqamlarda ko'rasiz.",
 		"stats": {
 			"workouts": "mashg'ulot",
@@ -51,7 +51,7 @@
 		}
 	},
 	"nutrition": {
-		"headline": "Ovqatlanishni nazoratda tut.",
+		"headline": "Ovqatlanish nazoratda",
 		"statement": "Ratsionni kuzat va senga nima haqiqatan mos kelishini tushun.",
 		"panel": {
 			"today": "Bugun",
@@ -66,7 +66,7 @@
 		}
 	},
 	"diary": {
-		"headline": "Yo'ling — bitta joyda.",
+		"headline": "Mashg'ulotlaring tarixi",
 		"statement": "Har bir mashg'ulot saqlanib qoladi va o'zing yozadigan tarixga qo'shiladi.",
 		"today": "Bugun",
 		"month": "mar",
@@ -79,9 +79,9 @@
 			"cardio": "Kardio"
 		},
 		"cards": {
-			"completed": { "title": "Mashg'ulot tugallandi" },
+			"completed": { "title": "Mashg'ulot yakunlandi" },
 			"streak": { "title": "{{days}} kun ketma-ket", "meta": "Barqarorlik" },
-			"record": { "title": "Yangi maksimum", "meta": "Yotib ko'tarish · {{weight}} kg" }
+			"record": { "title": "Yangi rekord", "meta": "Yotib ko'tarish · {{weight}} kg" }
 		}
 	},
 	"results": {
@@ -90,20 +90,20 @@
 		"after": "Keyin"
 	},
 	"download": {
-		"headline": "Bugun boshla.",
+		"headline": "Hozir boshla",
 		"statement": "FIT.ME — natijang uchun hammasi.",
-		"cta": "FitMe'ni yuklab olish",
+		"cta": "FIT.ME'ni yuklab olish",
 		"appStore": "App Store",
 		"googlePlay": "Google Play"
 	},
 	"features": {
-		"title": "Fitness sayohatingiz uchun kuchli funksiyalar",
+		"title": "Haqiqiy progress uchun",
 		"trainers": {
-			"title": "Sertifikatlangan shaxsiy murabbiylar",
+			"title": "Sertifikatlangan murabbiylar",
 			"description": "Fitness yo'lingizni yo'naltiruvchi ekspert murabbiylar bilan bog'laning"
 		},
 		"tracking": {
-			"title": "Taraqqiyotni kuzatish",
+			"title": "Progress kuzatuvi",
 			"description": "Batafsil tahlillar va ma'lumotlar bilan yaxshilanishlarni kuzating"
 		},
 		"measurements": {
@@ -115,7 +115,7 @@
 			"description": "Mukammal shakl uchun video qo'llanmalarga kirish"
 		},
 		"nutrition": {
-			"title": "Ovqatlanish rejasi",
+			"title": "Ovqatlanish rejalari",
 			"description": "Fitness maqsadlaringizga moslashtirilgan ovqatlanish rejalari"
 		},
 		"workouts": {
@@ -126,8 +126,8 @@
 	"subscription": {
 		"title": "FIT.ME premium obunasi",
 		"subtitle": "Servisning barcha funksiyalaridan foydalaning va orzu qilgan tanaga erishing",
-		"featuresTitle": "Obunaga nimalar kiradi",
-		"plansTitle": "Tariflar",
+		"featuresTitle": "Ichida nima bor",
+		"plansTitle": "Tarifni tanla",
 		"perMonth": "oyiga",
 		"popular": "Mashhur",
 		"buyButton": "Obunani rasmiylashtirish",
@@ -162,11 +162,11 @@
 	},
 	"cta": {
 		"title": "Fitness sayohatingizni bugun boshlang",
-		"subtitle": "FitMe bilan hayotini o'zgartirgan minglab foydalanuvchilarga qo'shiling",
+		"subtitle": "FIT.ME bilan hayotini o'zgartirgan minglab foydalanuvchilarga qo'shiling",
 		"comingSoon": "Tez kunda",
 		"becomeTrainer": "Murabbiy bo'ling"
 	},
 	"footer": {
-		"rights": "© 2025 FitMe. Barcha huquqlar himoyalangan."
+		"rights": "© 2025 FIT.ME. Barcha huquqlar himoyalangan."
 	}
 }

@@ -32,7 +32,7 @@ export default function Download() {
 					y={26}
 					amount={0.2}
 				>
-					<h2 className='text-[clamp(2.4rem,10.5vw,5.5rem)] font-semibold leading-[0.92] tracking-tightest lg:text-[clamp(3rem,5.4vw,5.75rem)]'>
+					<h2 className='text-[clamp(2.4rem,10.5vw,5.5rem)] font-premium leading-[0.92] lg:text-[clamp(3rem,5.4vw,5.75rem)]'>
 						{t('download.headline')}
 					</h2>
 				</Reveal>
@@ -64,7 +64,7 @@ export default function Download() {
 						transition={{ duration: 2.2, ease: EASE_PREMIUM }}
 						className='relative mx-auto w-[min(72vw,300px)] sm:w-[330px] lg:w-[380px]'
 					>
-						<PhoneShot className='w-full' />
+						{/* <PhoneShot className='w-full' /> */}
 					</motion.div>
 				</div>
 
@@ -77,7 +77,7 @@ export default function Download() {
 						href={storeLink}
 						target='_blank'
 						rel='noopener noreferrer'
-						className='inline-block w-full rounded-2xl bg-accent px-10 py-4 text-[15px] font-semibold text-white transition-colors duration-500 ease-premium hover:bg-accent-soft sm:w-auto'
+						className='inline-block w-full rounded-2xl bg-accent px-10 py-4 text-[15px] font-premium text-white transition-colors duration-500 ease-premium hover:bg-accent-soft sm:w-auto'
 					>
 						{t('download.cta')}
 					</a>

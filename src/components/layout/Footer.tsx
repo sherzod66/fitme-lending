@@ -5,7 +5,7 @@ export default function Footer() {
 	const { t } = useTranslation()
 	return (
 		<footer className='py-12 px-4 lg:px-8 bg-zinc-950'>
-			<div className='max-w-7xl mx-auto'>
+			<div className='max-w-edge mx-auto'>
 				<div className='flex flex-col md:flex-row justify-between items-center gap-8'>
 					<a
 						href='#'

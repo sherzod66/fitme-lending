@@ -56,7 +56,7 @@ export default function DiaryTimeline({ className }: Props) {
 
 									<div className='min-w-0 flex-1'>
 										<div className='flex items-baseline justify-between gap-3'>
-											<p className='truncate text-[13px] font-medium tracking-tight'>
+											<p className='truncate text-[13px] font-medium'>
 												{t(`diary.entries.${entry.key}`)}
 											</p>
 											<p

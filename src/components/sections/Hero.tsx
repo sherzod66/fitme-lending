@@ -16,7 +16,7 @@ export default function Hero() {
 	const shouldReduceMotion = useReducedMotion()
 
 	return (
-		<section className='grain relative isolate flex flex-col overflow-hidden bg-ink min-h-[100svh]'>
+		<section className='grain relative isolate min-h-[88svh] flex flex-col overflow-hidden bg-ink sm:min-h-[100svh]'>
 			{/* Single red light source, behind the athletes */}
 			<motion.div
 				initial={{ opacity: 0 }}
@@ -60,20 +60,25 @@ export default function Hero() {
 			</motion.div>
 
 			{/* Seats them into the darkness and carries the buttons */}
-			<div className='pointer-events-none absolute inset-x-0 bottom-0 h-[28svh] bg-gradient-to-t from-ink via-ink/80 to-transparent' />
+			<div className='max-w-3xl mx-auto pointer-events-none absolute inset-x-0 bottom-0 h-[15svh] bg-gradient-to-t from-ink via-ink/80 to-transparent' />
 
 			<div className='relative mx-auto flex w-full max-w-edge flex-1 flex-col items-center justify-end px-5 pb-8 text-center sm:justify-between sm:px-8 sm:pb-16 sm:pt-28 lg:px-14 lg:pt-32'>
 				{/* On phones the headline hangs off the top edge of the shot, so the dark
 				    space gathers above the words instead of splitting them from the
 				    athletes. From `sm` up it goes back to the top of the frame.
-				    The mobile scale is the largest that still keeps "Твой прогресс." on
-				    one line at 320px — raising it wraps the line. */}
-				<h1 className='absolute inset-x-5 bottom-[calc(93vw_+_12rem)] text-[clamp(2.25rem,11vw,4rem)] font-semibold leading-[0.94] tracking-tightest sm:static sm:inset-x-auto sm:bottom-auto sm:text-[clamp(2.1rem,5vw,3.4rem)] lg:text-[clamp(2.5rem,3.6vw,4rem)]'>
-					<RevealLine delay={0.15}>{t('hero.line1')}</RevealLine>
-					<RevealLine delay={0.27}>{t('hero.line2')}</RevealLine>
+				    Mobile scale is capped so each of the three long lines stays on one
+				    row down to ~360px with Russo One. */}
+				<h1 className='absolute inset-x-3 bottom-[calc(95vw_+_12rem)] text-[clamp(0.7rem,3.55vw,1.1rem)] font-premium leading-[1.2] sm:static sm:inset-x-auto sm:bottom-auto sm:px-0 sm:text-[clamp(1.35rem,2.8vw,2.1rem)] lg:text-[clamp(1.75rem,2.4vw,2.6rem)]'>
+					<RevealLine delay={0.15}>
+						<span className='block whitespace-nowrap'>{t('hero.line1')}</span>
+					</RevealLine>
+					<RevealLine delay={0.27}>
+						<span className='block whitespace-nowrap'>{t('hero.line2')}</span>
+					</RevealLine>
 					<RevealLine delay={0.39}>
-						{t('hero.line3') && <>{t('hero.line3')} </>}
-						<span className='text-accent'>{t('hero.line3Accent')}</span>
+						<span className='block whitespace-nowrap'>
+							{t('hero.line3')} <span className='text-accent'>{t('hero.line3Accent')}</span>
+						</span>
 					</RevealLine>
 				</h1>
 
