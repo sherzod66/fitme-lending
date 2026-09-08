@@ -11,7 +11,7 @@ export const NAV_SECTIONS: NavSection[] = [
 ]
 
 export const LANGUAGES = [
+	{ code: 'uz', short: 'UZ', name: "O'zbek" },
 	{ code: 'ru', short: 'RU', name: 'Русский' },
-	{ code: 'en', short: 'EN', name: 'English' },
-	{ code: 'uz', short: 'UZ', name: "O'zbek" }
+	{ code: 'en', short: 'EN', name: 'English' }
 ]

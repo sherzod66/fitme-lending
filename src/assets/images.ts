@@ -66,7 +66,7 @@ export const images: TImage = {
 		},
 		uz: {
 			alt: '4',
-			src: '/screens/4.webp'
+			src: '/screens/5.webp'
 		},
 		en: {
 			alt: '4',
@@ -80,7 +80,7 @@ export const images: TImage = {
 		},
 		uz: {
 			alt: '5',
-			src: '/screens/5.webp'
+			src: '/screens/4.webp'
 		},
 		en: {
 			alt: '5',

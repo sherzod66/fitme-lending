@@ -33,7 +33,7 @@ export default function MobileNav({
 }: Props) {
 	const { t, i18n } = useTranslation()
 	const shouldReduceMotion = useReducedMotion()
-	const current = i18n.resolvedLanguage ?? i18n.language ?? 'ru'
+	const current = i18n.resolvedLanguage ?? i18n.language ?? 'uz'
 
 	useEffect(() => {
 		if (!open) return

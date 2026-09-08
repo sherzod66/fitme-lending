@@ -4,16 +4,16 @@ import { useTranslation } from 'react-i18next'
 
 import { EASE_PREMIUM } from '../ui/motion/easing'
 
-const CALORIES = { eaten: 773, goal: 2400 }
+const CALORIES = { eaten: 810, goal: 2231 }
 
 const MACROS = [
-	{ key: 'protein', current: 128, goal: 133 },
-	{ key: 'fats', current: 3, goal: 52 },
-	{ key: 'carbs', current: 130, goal: 350 }
+	{ key: 'protein', current: 50, goal: 88 },
+	{ key: 'fats', current: 42, goal: 50 },
+	{ key: 'carbs', current: 60, goal: 357 }
 ]
 
 const MEALS = [
-	{ key: 'breakfast', kcal: 773, state: 'done' },
+	{ key: 'breakfast', kcal: 810, state: 'done' },
 	{ key: 'lunch', kcal: 0, state: 'active' },
 	{ key: 'dinner', kcal: 0, state: 'planned' }
 ] as const

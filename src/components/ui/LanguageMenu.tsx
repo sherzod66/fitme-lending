@@ -16,7 +16,7 @@ export default function LanguageMenu({ className }: Props) {
 	const [isOpen, setIsOpen] = useState(false)
 	const containerRef = useRef<HTMLDivElement>(null)
 
-	const current = i18n.resolvedLanguage ?? i18n.language ?? 'ru'
+	const current = i18n.resolvedLanguage ?? i18n.language ?? 'uz'
 	const active = LANGUAGES.find(language => current.startsWith(language.code)) ?? LANGUAGES[0]
 
 	useEffect(() => {

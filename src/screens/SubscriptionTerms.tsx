@@ -204,7 +204,7 @@ const languageMeta: Record<Language, { title: string; updated: string; label: st
 }
 
 const SubscriptionTerms = () => {
-	const [language, setLanguage] = useState<Language>('ru')
+	const [language, setLanguage] = useState<Language>('uz')
 	const sections = useMemo(() => sectionsByLanguage[language], [language])
 	const [activeSection, setActiveSection] = useState(sections[0].id)
 
