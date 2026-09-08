@@ -70,7 +70,7 @@ export default function Progress() {
 		<section
 			ref={sectionRef}
 			id='progress'
-			className='grain relative isolate overflow-hidden bg-ink py-28 sm:py-32 lg:py-40'
+			className='grain relative isolate overflow-hidden bg-ink py-24 sm:py-32 lg:py-40'
 		>
 			<ColumnRules />
 
@@ -111,10 +111,10 @@ export default function Progress() {
 						</motion.div>
 
 						{/* Mobile gets the full column width instead of the device width */}
-						<ProgressDashboard className='mt-8 lg:hidden' />
+						{/* <ProgressDashboard className='mt-8 lg:hidden' /> */}
 
 						{/* Mobile keeps the same numbers, stacked under the visual */}
-						<div className='mt-6 grid grid-cols-3 gap-3 lg:hidden'>
+						{/* <div className='mt-6 grid grid-cols-3 gap-3 lg:hidden'>
 							{stats.map((stat, index) => (
 								<FloatingStat
 									key={stat.key}
@@ -125,7 +125,7 @@ export default function Progress() {
 									floatOffset={index * 1.3}
 								/>
 							))}
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</div>

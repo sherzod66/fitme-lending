@@ -67,7 +67,7 @@ export default function MobileNav({
 						className='relative flex shrink-0 items-center justify-between px-5 sm:px-8'
 					>
 						<img
-							src='/FIT.ME.png'
+							src='/FitMe.png'
 							alt='FIT.ME'
 							className='h-6 w-auto object-contain'
 						/>
@@ -81,7 +81,7 @@ export default function MobileNav({
 						</button>
 					</div>
 
-					<nav className='flex flex-1 flex-col justify-center px-5 sm:px-8'>
+					<nav className='flex flex-1 flex-col justify-center px-5 sm:px-8 font-premium'>
 						{showSections &&
 							NAV_SECTIONS.map((section, index) => (
 								<motion.button
@@ -101,7 +101,7 @@ export default function MobileNav({
 									</span>
 									<span
 										className={clsx(
-											'text-[clamp(1.9rem,9vw,2.75rem)] font-semibold uppercase leading-none transition-colors duration-500',
+											'text-[clamp(1.9rem,9vw,2.75rem)] uppercase leading-none transition-colors duration-500',
 											activeId === section.id ? 'text-accent' : 'text-white group-hover:text-accent'
 										)}
 									>
@@ -122,7 +122,7 @@ export default function MobileNav({
 							target='_blank'
 							rel='noopener noreferrer'
 							onClick={onClose}
-							className='flex w-full items-center justify-center rounded-2xl bg-accent px-6 py-4 text-[15px] font-semibold text-white transition-colors duration-500 hover:bg-accent-soft'
+							className='flex w-full items-center justify-center rounded-2xl bg-accent px-6 py-4 text-[15px] font-premium text-white transition-colors duration-500 hover:bg-accent-soft'
 						>
 							{t('nav.downloadApp')}
 						</a>
@@ -134,7 +134,7 @@ export default function MobileNav({
 										key={language.code}
 										onClick={() => i18n.changeLanguage(language.code)}
 										className={clsx(
-											'text-[11px] uppercase tracking-[0.2em] transition-colors duration-500',
+											'text-[11px] uppercase font-premium transition-colors duration-500',
 											current.startsWith(language.code)
 												? 'text-accent'
 												: 'text-muted hover:text-white'
