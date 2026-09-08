@@ -16,7 +16,7 @@ export default function Hero() {
 	const shouldReduceMotion = useReducedMotion()
 
 	return (
-		<section className='grain relative isolate min-h-[88svh] flex flex-col overflow-hidden bg-ink sm:min-h-[100svh]'>
+		<section className='grain relative isolate flex flex-col overflow-hidden bg-ink min-h-[100svh]'>
 			{/* Single red light source, behind the athletes */}
 			<motion.div
 				initial={{ opacity: 0 }}
@@ -68,7 +68,7 @@ export default function Hero() {
 				    athletes. From `sm` up it goes back to the top of the frame.
 				    Mobile scale is capped so each of the three long lines stays on one
 				    row down to ~360px with Russo One. */}
-				<h1 className='absolute inset-x-3 bottom-[calc(95vw_+_12rem)] text-[clamp(0.7rem,3.55vw,1.1rem)] font-premium leading-[1.2] sm:static sm:inset-x-auto sm:bottom-auto sm:px-0 sm:text-[clamp(1.35rem,2.8vw,2.1rem)] lg:text-[clamp(1.75rem,2.4vw,2.6rem)]'>
+				<h1 className='absolute inset-x-3 bottom-[74%] text-[clamp(0.7rem,3.55vw,1.1rem)] font-premium leading-[1.2] sm:static sm:inset-x-auto sm:bottom-auto sm:px-0 sm:text-[clamp(1.35rem,2.8vw,2.1rem)] lg:text-[clamp(1.75rem,2.4vw,2.6rem)]'>
 					<RevealLine delay={0.15}>
 						<span className='block whitespace-nowrap'>{t('hero.line1')}</span>
 					</RevealLine>
